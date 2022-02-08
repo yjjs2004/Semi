@@ -8,7 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("*.net")
+@WebServlet("*.com")
 public class PersonControll extends javax.servlet.http.HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -40,20 +40,29 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		Action action = null;
 
 		switch (command) {
-		case "/join.net":
+		case "/join.com":
 			action = new PersonJoinAction();
 			break;
-		case "/idcheck.net":
+		case "/idcheck.com":
 			action = new PersonIdcheckAction();
 			break;
-		case "/nickcheck.net":
+		case "/nickcheck.com":
 			action = new PersonNickcheckAction();
 			break;
-		case "/login.net":
+		case "/login.com":
 			action = new PersonLoginAction();
 			break;
+		case "/joinProcess.com":
+			action = new PersonJoinProcessAction();
+			break;
+		case "/faqregist.com":
+			action = new PersonFaqRegisterAction();
+			break;
+		case "/faqhistory.com":
+			action = new PersonFaqHistoryAction();
+			break;
 		/*
-		 * case"/joinProcess.net": action = new MemberJoinProcessAction(); break;
+		 * 
 		 * case"/loginProcess.net": action = new MemberLoginProcessAction(); break;
 		 * case"/logout.net": action = new MemberLogoutAction(); break;
 		 * case"/memberUpdate.net": action = new MemberUpdateAction(); break;

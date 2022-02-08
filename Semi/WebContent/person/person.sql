@@ -10,7 +10,7 @@ PERSONAL_POST varchar2(6),
 PERSONAL_ADDRESS varchar2(150),
 PERSONAL_EMAIL varchar2(30)
 );
-
+select * from personal
 create table cs(
 CS_LIST VARCHAR2(15),
 CS_DATE date default sysdate,
@@ -19,11 +19,22 @@ CS_NUMBER VARCHAR2(15) PRIMARY KEY,
 CS_ANSWER_OK VARCHAR2(3),
 CS_ANSWER VARCHAR2(1000)
 );
+create sequence faq_seq
+INCREMENT BY 1 
+START WITH 1
+MINVALUE 1
+MAXVALUE 1000
+NOCYCLE
+CACHE;
 
 create table faq(
-FAQ_NUMBER VARCHAR2(15),
+FAQ_KINDS VARCHAR2(15),
+FAQ_SUBJECT VARCHAR2(50),
 FAQ_CONTENT VARCHAR2(1000),
+FAQ_DATE date default sysdate,
+FAQ_COMPLETE varchar2(3) check(gender in('m','f'))
 );
 
 CREATE TABLE SEARCH(
 SEARCH_HISTORY VARCHR2(45));
+

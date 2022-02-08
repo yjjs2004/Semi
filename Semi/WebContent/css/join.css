@@ -45,7 +45,7 @@ button:focus{
     background-color: #f44336;
 }
 
-.cancelbtn, .submitbtn {
+.cancelbtn, .submitbtn, #person_post, #person_addr, .person_addr_detail {
   float: left;
   width: 50%;
 }
