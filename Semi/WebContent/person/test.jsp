@@ -37,7 +37,7 @@
 <style type="text/css">/* Chart.js */
 @keyframes chartjs-render-animation {
 	from {opacity: .99
-}
+}  
 
 to {
 	opacity: 1
@@ -99,7 +99,7 @@ to {
 			style="cursor: move;">
 
 			<h3 class="card-title">
-				<i class="far fa-calendar-alt"></i> Calendar
+				<i class="far fa-calendar-alt"></i> Calendar.
 			</h3>
 			<!-- tools card -->
 			<div class="card-tools">
