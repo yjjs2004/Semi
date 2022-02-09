@@ -167,6 +167,19 @@ body {
 	z-index: 20;
 }
 
+.popup-wrap3 {
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	padding: 15px 15px 1px 15px;
+	z-index: 20;
+}
+
 .popup {
 	width: 640px;
 	height: 136px;
@@ -309,7 +322,7 @@ button {
 			<div id="modal3">
 				<div class="card bg-gradient-success"
 					style="position: relative; left: 0px; top: 0px;">
-					<div class="card-header border-0 ui-sortable-handle" style="cursor: move;">
+					<div class="card-header border-0 ui-sortable-handle">
 						<h3 class="card-title" id="check">
 							<i class="far fa-calendar-alt"></i> 
 						</h3>
@@ -921,7 +934,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방3.jpg">
+							<img class="Img sImg" src="../image/방3.jfif">
 						</div>
 						<div>
 							텍스트3<br> 설명이 요래저래 <br> 저래요래
@@ -929,7 +942,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방4.jpg">
+							<img class="Img sImg" src="../image/방4.jfif">
 						</div>
 						<div>
 							텍스트4<br> 설명이 요래저래 <br> 저래요래

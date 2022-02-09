@@ -3,13 +3,11 @@ $(function (){
 	//체크인 
 	$('#checkIn').click(function(){
 		$("#check").text('체크인');
-		alert($("#check").text());
 		$("#popup-calendar").css('display','flex').hide().fadeIn();	
 	});
 	//체크아웃 
 	$('#checkOut').click(function(){
 		$("#check").text('체크아웃');
-		alert($("#check").text());
 		$("#popup-calendar").css('display','flex').hide().fadeIn();
 	});
 	//인원수 
