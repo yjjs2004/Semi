@@ -292,5 +292,53 @@ public class PersonDAO {
 		return f;
 	}
 
+	public int isId(String id, String pass) {
+		Connection conn=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		int result=1;
+	try
+
+	{
+		conn = ds.getConnection();
+
+		String sql = "select PERSONAL_ID, PERSONAL_PASSWORD from personal where id = PERSONAL_ID";
+		pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, id);
+		rs = pstmt.executeQuery();	
+		if (rs.next()) {
+			if (rs.getString(2).equals(pass)) {
+				result = -1;
+			} else {
+				result = 0;
+			}
+		}
+	}catch(
+	Exception e)
+	{
+		e.printStackTrace();
+	}finally
+	{
+		if (rs != null)
+			try {
+				rs.close();
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
+		if (pstmt != null)
+			try {
+				pstmt.close();
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
+		if (conn != null)
+			try {
+				conn.close();
+			} catch (SQLException ex) {
+				ex.printStackTrace();
+			}
+	}return result;
+	}
+
 
 }

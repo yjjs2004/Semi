@@ -16,7 +16,7 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		/*
-		 * ��û�� ��ü URL �߿��� ��Ʈ ��ȣ �������� ������ ���ڿ����� ��ȯ�˴ϴ�. ��)contextPath�� "/JspProject" �ΰ��
+		 * ��û�� ��ü URL �߿��� ��Ʈ ��ȣ �������� ������ ���ڿ����� ��ȯ�˴ϴ�. ��)contextPath�� "/JspProject" �ΰ��
 		 * http://localhost:8088/JspProject/login.net�� ��û�ϸ� RequestURI��
 		 * "/JspProject/login.net" ��ȯ�˴ϴ�.
 		 */
@@ -24,12 +24,12 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		String RequestURI = request.getRequestURI();
 		System.out.println("RequestURI = " + RequestURI);
 
-		// getGontextPath() : ���ؽ�Ʈ ��ΰ� ��ȯ�˴ϴ�.
+		// getGontextPath() : ���ؽ�Ʈ ��ΰ� ��ȯ�˴ϴ�.
 		// contextPath�� "/JspProject"�� ��ȯ�˴ϴ�.
 		String contextPath = request.getContextPath();
 		System.out.println("contextPath = " + contextPath);
 
-		// RequestURI���� ���ؽ�Ʈ ��� ���� ���� �ε��� ��ġ�� ���ں���
+		// RequestURI���� ���ؽ�Ʈ ��� ���� ���� �ε��� ��ġ�� ���ں���
 		// ������ ��ġ ���ڱ��� �����մϴ�.
 		// command�� "/login.net" ��ȯ�˴ϴ�.
 		String command = RequestURI.substring(contextPath.length());
@@ -51,6 +51,9 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 			break;
 		case "/login.com":
 			action = new PersonLoginAction();
+			break;
+		case "/loginProcess.com":
+			action = new PersonLoginProcessAction();
 			break;
 		case "/joinProcess.com":
 			action = new PersonJoinProcessAction();
