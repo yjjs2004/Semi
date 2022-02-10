@@ -12,7 +12,8 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
-<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet"
+	href="../plugins/fontawesome-free/css/all.min.css">
 <link rel="stylesheet"
 	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet"
@@ -25,7 +26,8 @@
 	href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 <link rel="stylesheet"
 	href="../plugins/daterangepicker/daterangepicker.css">
-<link rel="stylesheet" href="../plugins/summernote/summernote-bs4.min.css">
+<link rel="stylesheet"
+	href="../plugins/summernote/summernote-bs4.min.css">
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c751f51d711b8cb1563dba0f5bdaf7c6&librarys=services"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
@@ -34,9 +36,8 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="../plugins/jquery/jquery.min.js"></script>
 <script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-<script src="../js/datepicker.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
 <style type="text/css">/* Chart.js */
 @
@@ -289,9 +290,10 @@ button {
 	width: 960px;
 	top: 4.4rem;
 }
-.varDiv{
-	float:left;
-	width:6rem;
+
+.varDiv {
+	float: left;
+	width: 6rem;
 }
 </style>
 <jsp:include page="header.jsp" />
@@ -307,27 +309,28 @@ button {
 		</div>
 		<%--중앙 회색 DIV --%>
 		<div class="var">
-					<div class="varDiv" style="margin-right:4rem; margin-left:2rem">
-				<label> 위치 <input placeholder="어디로 여행가세요?" style="width:10rem"></label>
+			<div class="varDiv" style="margin-right: 4rem; margin-left: 2rem">
+				<label> 위치 <input placeholder="어디로 여행가세요?"
+					style="width: 10rem"></label>
+			</div>
+			<div class="varDiv">
+				<i class="far fa-calendar-alt"></i>체크인
+				<div>
+					<input type="text" id="datepicker1" style="width: 6rem">
 				</div>
-				<div class="varDiv">			
-					<i class="far fa-calendar-alt"></i>체크인
-					<div>								
-						<input type="text" id="datepicker1" style="width:6rem">
-					</div>
-				</div>
-				<div class="varDiv">
-					<i class="far fa-calendar-alt"></i>체크아웃
-					<input type="text" id="datepicker2" style="width:6rem">
-				</div>
-				<div class="varDiv" style="margin-top:1rem">
-				<button id="people">인원수</button>			
+			</div>
+			<div class="varDiv">
+				<i class="far fa-calendar-alt"></i>체크아웃 <input type="text"
+					id="datepicker2" style="width: 6rem">
+			</div>
+			<div class="varDiv" style="margin-top: 1rem">
+				<button id="people">인원수</button>
 				<label>
 					<button id="search">
 						<i class="fas fa-search"></i>
 					</button>
 				</label>
-				</div>			
+			</div>
 		</div>
 
 
@@ -794,10 +797,8 @@ button {
 				</div>
 			</div>
 		</div>
-		
-		<div id="modal3">
-			
-		</div>
+
+		<div id="modal3"></div>
 
 
 		<jsp:include page="pooter.jsp" />

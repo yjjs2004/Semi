@@ -33,7 +33,7 @@ header {
 	<header>
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
-				<a href="http://localhost:8088/Semi/person/test.jsp#" class="navbar-brand"> <img
+				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
 					src="../image/로고.png" width="65px" height="65px" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8">
 				</a>
@@ -48,7 +48,7 @@ header {
 				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 					<!-- Left navbar links -->
 					<ul class="navbar-nav">
-						<li class="nav-item"><a href="http://localhost:8088/Semi/person/test.jsp#" class="nav-link">Home</a>
+						<li class="nav-item"><a href="http://localhost:8088/Semi/person/mainPage.jsp" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item"><a href="#" class="nav-link">Contact</a>
 						</li>
