@@ -6,36 +6,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="../js/slideShow.js"></script>
-<script src="../js/button.js"></script>
-<script src="../js/map.js"></script>
+<script src="js/slideShow.js"></script>
+<script src="js/button.js"></script>
+<script src="js/map.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 <link rel="stylesheet"
-	href="../plugins/fontawesome-free/css/all.min.css">
+	href="plugins/fontawesome-free/css/all.min.css">
 <link rel="stylesheet"
 	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 <link rel="stylesheet"
-	href="../plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+	href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
 <link rel="stylesheet"
-	href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-<link rel="stylesheet" href="../plugins/jqvmap/jqvmap.min.css">
-<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+	href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+<link rel="stylesheet" href="dist/css/adminlte.min.css">
 <link rel="stylesheet"
-	href="../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+	href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 <link rel="stylesheet"
-	href="../plugins/daterangepicker/daterangepicker.css">
+	href="plugins/daterangepicker/daterangepicker.css">
 <link rel="stylesheet"
-	href="../plugins/summernote/summernote-bs4.min.css">
+	href="plugins/summernote/summernote-bs4.min.css">
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c751f51d711b8cb1563dba0f5bdaf7c6&librarys=services"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <link rel="stylesheet"
 	href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script src="../plugins/jquery/jquery.min.js"></script>
-<script src="../plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
@@ -626,7 +626,7 @@ button {
 					style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
 					<div class="swiper-slide">
 						<div>
-							<img class="Img bImg shadow shadow" src="../image/방1.jfif">
+							<img class="Img bImg shadow shadow" src="image/방1.jfif">
 						</div>
 						<div>
 							<p>하얀색 방1</p>
@@ -635,7 +635,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img bImg shadow" src="../image/방2.jfif">
+							<img class="Img bImg shadow" src="image/방2.jfif">
 						</div>
 						<div>
 							텍스트2<br> 설명이 요래저래 <br> 저래요래
@@ -643,7 +643,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img bImg shadow" src="../image/방5.jfif">
+							<img class="Img bImg shadow" src="image/방5.jfif">
 						</div>
 						<div>
 							텍스트3<br> 설명이 요래저래 <br> 저래요래
@@ -651,7 +651,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img bImg shadow" src="../image/방6.jfif">
+							<img class="Img bImg shadow" src="image/방6.jfif">
 						</div>
 						<div>
 							텍스트4<br> 설명이 요래저래 <br> 저래요래
@@ -659,7 +659,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img bImg shadow" src="../image/방7.jfif">
+							<img class="Img bImg shadow" src="image/방7.jfif">
 						</div>
 						<div>
 							텍스트5<br> 설명이 요래저래 <br> 저래요래
@@ -678,7 +678,7 @@ button {
 					style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방1.jfif">
+							<img class="Img sImg" src="image/방1.jfif">
 						</div>
 						<div>
 							텍스트1<br> 설명이 요래저래 <br> 저래요래
@@ -686,7 +686,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방2.jfif">
+							<img class="Img sImg" src="image/방2.jfif">
 						</div>
 						<div>
 							텍스트2<br> 설명이 요래저래 <br> 저래요래
@@ -694,7 +694,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방3.jfif">
+							<img class="Img sImg" src="image/방3.jfif">
 						</div>
 						<div>
 							텍스트3<br> 설명이 요래저래 <br> 저래요래
@@ -702,7 +702,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방4.jfif">
+							<img class="Img sImg" src="image/방4.jfif">
 						</div>
 						<div>
 							텍스트4<br> 설명이 요래저래 <br> 저래요래
@@ -710,7 +710,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방5.jfif">
+							<img class="Img sImg" src="image/방5.jfif">
 						</div>
 						<div>
 							텍스트5<br> 설명이 요래저래 <br> 저래요래
@@ -718,7 +718,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방6.jfif">
+							<img class="Img sImg" src="image/방6.jfif">
 						</div>
 						<div>
 							텍스트6<br> 설명이 요래저래 <br> 저래요래
@@ -726,7 +726,7 @@ button {
 					</div>
 					<div class="swiper-slide">
 						<div>
-							<img class="Img sImg" src="../image/방7.jfif">
+							<img class="Img sImg" src="image/방7.jfif">
 						</div>
 						<div>
 							텍스트7<br> 설명이 요래저래 <br> 저래요래
@@ -739,9 +739,9 @@ button {
 			<hr>
 			<%--광고 배너 이미지 슬라이드 --%>
 			<div>
-				<img class="slide1" src="../image/다운로드.jfif" id="1"> <img
-					class="slide1" src="../image/다운로드2.jfif" id="2"> <img
-					class="slide1" src="../image/다운로드3.jfif" id="3">
+				<img class="slide1" src="image/다운로드.jfif" id="1"> <img
+					class="slide1" src="image/다운로드2.jfif" id="2"> <img
+					class="slide1" src="image/다운로드3.jfif" id="3">
 			</div>
 		</div>
 
@@ -803,6 +803,6 @@ button {
 
 		<jsp:include page="pooter.jsp" />
 	</div>
-	<script src="../plugins/summernote/summernote-bs4.min.js"></script>
+	<script src="plugins/summernote/summernote-bs4.min.js"></script>
 </body>
 </html>
