@@ -6,17 +6,22 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.person.db.Person;
 import net.person.db.PersonDAO;
 
-public class PersonFaqHistoryAction implements Action {
+public class PersonInfoAction implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		PersonDAO dao=new PersonDAO();
-		int result = dao.faqHistory(request.getParameter("id"));
-		response.getWriter().append(Integer.toString(result));
-		System.out.println(result);
+		ActionForward forward=new ActionForward();
+		String id=request.getParameter("");
+		PersonDAO mdao=new PersonDAO();
+		Person p=mdao.Person_info(id);
+		
+		forward.setPath("person/updateForm.jsp");
+		forward.setRedirect(false);
+		request.setAttribute("personinfo", p);
 		return null;
 	}
 

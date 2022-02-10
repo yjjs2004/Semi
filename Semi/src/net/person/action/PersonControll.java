@@ -58,8 +58,10 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		case "/faqregist.com":
 			action = new PersonFaqRegisterAction();
 			break;
-		case "/faqhistory.com":
-			action = new PersonFaqHistoryAction();
+		case "/faqinfo.com":
+			action = new PersonFaqInfoAction();
+		case "/personinfo.com":
+			action = new PersonInfoAction();
 			break;
 		/*
 		 * 
