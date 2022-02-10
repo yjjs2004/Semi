@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -13,12 +13,12 @@
 			<div style ="width:100">상품 정보</div>
 			<hr>
 			<div>
-				예약자 정보<br>
+				예약자 정보<span style="font-style: red">*</span><br>
 				성명 <br>
 				성명을 입력해주세요.<br>
 							  <br>
 				휴대폰 번호
-				<div style="text-align: center">
+				<div style="text-align: center"> 
 					<button>인증하기</button>
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 				예약자 정보와 동일합니다.<br>	<%--클릭시 예약자 정보의 값을 불러온다. --%>
 				성명 <br>
 				성명을 입력해주세요.<br>
-				후대폰 번호 <br>
+				휴대폰 번호 <br>
 				휴대폰 번호를 입력해 주세요.<br>
 			</div>
 			<hr>
