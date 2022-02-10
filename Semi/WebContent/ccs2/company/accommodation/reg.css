@@ -1,0 +1,143 @@
+main{
+    background: #F9FBFF;
+    
+}
+    main>div{
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }  
+    main>div>h1{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main div .megabox{
+        display: flex;
+        justify-content: center;
+        width: 800px;
+        flex-wrap: wrap;
+        /* border: 1px solid black; */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    main .content-box{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+        .content-box .insert-box{
+            height: 62px;
+            padding-bottom: 10px;
+            padding-left: 100px;
+            color: black;
+            
+        }
+
+        .content-box .text-box{
+            height: 30px;
+            width: 320px;
+            padding-left: 10px;
+        }
+        .content-box select{
+            width: 157px;
+            height: 30px;
+        }
+        .insert-box .acc-type{
+            width: 320px;
+            height: 30px;
+            padding-left: 145px;
+            
+        }
+        .insert-button{
+            padding-top: 20px ;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+        .img-box{
+            border-bottom: 1px dashed gray;
+            opacity: 0.5;
+        }
+        .img-box .insert-box{
+            opacity: 1.0;
+        }
+            .button{
+                height: 40px;
+                width: 120px;
+                border-radius: 5px;
+                background: white;
+                /* padding:5px 10px; */
+                vertical-align: middle;
+                cursor: pointer;
+                color: #5f0081;
+                font-weight: bold;
+                border: 1px solid #F9FBFF;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .button:hover{
+                background-color: #F9FBFF;
+                opacity: 0.8;
+                color: #5f0081;
+                border: 2px solid #5f0081;
+            }
+        .box{
+            width: 423px;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: start;
+        }
+            .box .add-room{
+                width: 440px;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
+                /* border: 0.5px solid #fc0453; */
+            }  
+            .add-room .text-box{
+                padding-left: 10px;
+            }
+
+                .add-room div{
+                    padding-left: 60px;
+                    /* padding-top: 5px; */
+                    padding-bottom: 10px;
+                    /* padding-right: 30px; */
+                }
+                .add-room .text-box{
+                    height: 30px;
+                    width: 320px;
+                }
+
+
+    .btn-box{
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        padding-left: 10px;
+        margin-bottom: 100px;
+    }
+    .submit-btn{
+        margin-left: auto;
+        margin-top: auto;
+        background-color: #5f0081;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 14px;
+        height: 50px;
+        width: 320px;
+
+        
+    }
+    .submit-btn:hover{
+        background-color: #5f0081;
+        opacity: 0.8;
+    }

@@ -1,0 +1,304 @@
+/********************************************/
+.container-sec {
+    background: #F9FBFF;
+}
+
+    .container {
+        width: 1200px;
+        min-height: 500px;
+        margin: 0 auto;
+        padding-top: 30px;
+        display: flex;
+    }
+
+    .aside {
+        width: 300px;
+        height: 330px;
+        margin-top: 70px;
+        padding-left: 40px;
+    }
+
+        .aside > h1 {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 10px 0 0 20px;
+        }
+
+        .aside > ul {
+            width: 200px;
+            padding: 10px 0 0 40px;
+        }
+
+        .aside li {
+            height:60px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            font-size: 20px;
+            transform: scale(1);
+            transition: transform 0.1s;
+            
+        }
+        .aside li:hover {
+            border-bottom:1px solid #fc0453;
+            transform: scale(1.03);
+            color:#fc0453;
+            font-weight: bold;
+        }
+
+        .aside .active {
+            font-weight: bold;
+            color: #fc0453;
+        }
+
+            .aside li > a {
+                text-decoration: none;
+            }
+/***********************************/
+        .main{
+            width: 900px;
+            margin: 0 auto;
+        }
+
+            .breadcrumb > .breadcrumb-list {
+                display: flex;
+                justify-content: flex-end;
+                font-size: 12px;
+                margin-bottom: 30px;
+            }
+
+            .main .btn-left,
+            .main .btn-right{
+                align-items: center;
+            }
+
+            .main>div:first-child{
+                padding-top: 30px;
+                --text-indent: 100px;
+            }
+            .main>div:nth-child(2){
+                display: flex;
+                padding-top: 20px;
+                justify-content: space-evenly;
+            }
+                .main>div:nth-child(2)>div{
+                    height: 100%;
+                    display: flex;
+                    margin: 5px;
+                }
+
+            .proposal-item-container{
+                justify-content: space-evenly;
+                transition: transform 1s;
+            }
+                
+                .main>div:nth-child(2)>div:first-child{
+                    margin-left: 0px;
+                }
+                .main>div:nth-child(2)>div:last-child{
+                    margin-right: 0px;
+                }
+
+
+                .proposal-info {
+                    border: 1px solid purple;
+                    width: 330px;
+                    margin: 0px 10px;
+                }
+
+                .proposal-info:hover {
+                    background: rgb(203, 185, 221);
+                    cursor: pointer;
+                }
+
+                .proposal-info> h2 {
+                        padding-left: 10px;
+                        font-weight: bold;
+                    }
+
+                    .proposal-info> ul > li {
+                            display: flex;
+                            --flex-grow: 1;
+                            padding-left: 10px;
+                            margin-top: 5px;
+                        }
+
+                        .proposal-info> ul > li > div{
+                                --border: 1px solid red;
+                                flex-basis: 120px;
+                                flex-grow: 1;
+                            }
+
+                            .proposal-info> ul > li > div:nth-child(2){
+                                --border: 1px solid red;
+                                flex-basis: 250px;
+                                flex-grow: 3;
+                            }
+
+                            .proposal-info> ul > li > .wanted-price {
+                                font-weight: bold;
+                                color: #FC0453;
+                            }
+/**********************************/
+            .offer-sec {
+                --border: 1px solid red;
+                margin: 70px auto 0 auto;
+            }
+
+                .offer-sec > h1 {
+                    --border: 1px solid green;
+                    width: 500px;
+                    font-weight: bold;
+                    font-size: 24px;
+                    margin-left: 30px;
+                }
+
+                .offer-form {
+                    --border: 1px solid blue;
+                    margin: 20px 0px 0 30px;
+                }
+
+                    .offer-form > section {
+                        display: flex;
+                        border: 1px solid rgb(209, 196, 196);
+                        border-radius: 5px;
+                        margin-top: 20px;
+                        width: 805px;
+                    }
+
+                        .offer-form > .back-btn-container {
+                            width: 100px; /* submit 버튼 너비 수정해야함 */
+                            margin: 0 auto;
+                        }
+
+                        .offer-form > section > .offer-container {
+                            flex-grow: 10;
+                            display: flex;
+                            --border: 1px solid red;
+                            padding-left: 10px;
+                            width: 500px
+                        }
+
+                            .offer-img-container {
+                                margin: 10px 0 5px 0;
+                                transform: scale(1);
+                                transition: transform 0.2s;
+                            }
+
+                            .offer-img-container:hover {
+                                transform: scale(1.02);
+                            }
+
+                                .offer-img-container img {
+                                    width: 370px;
+                                    height: 220px;
+                                }
+
+                            .offer-detail-container {
+                                width: 100%;
+                                margin-left: 10px;
+                                position: relative;
+                            }
+
+                            .offer-detail-container .offer-room {
+                                font-size: 20px;
+                                font-weight: bold;
+                                position: absolute;
+                                top: 10px;
+                            }
+
+                            .offer-detail-container .offer-bed-count {
+                                margin-top: 30px;
+                            }
+
+                                .offer-detail-container .offer-bed-count > div:nth-child(1) {
+                                    position: absolute;
+                                    top: 55px;
+                                }
+
+                                .offer-detail-container .offer-bed-count > div:nth-child(2) {
+                                    margin-right: 10px;
+                                    position: absolute;
+                                    top: 55px;
+                                    right: 10px;
+                                }
+
+                            .offer-detail-container .offer-max-headcount {
+                                margin-top: 30px;
+                            }
+
+                                .offer-detail-container .offer-max-headcount > div:nth-child(1) {
+                                    position: absolute;
+                                    top: 95px;
+                                }
+
+                                .offer-detail-container .offer-max-headcount > div:nth-child(2) {
+                                    margin-right: 10px;
+                                    position: absolute;
+                                    top: 95px;
+                                    right: 10px;
+                                }
+
+                            .offer-detail-container .offer-price {
+                                margin-top: 30px;
+                            }
+
+                                .offer-detail-container .offer-price > div:nth-child(1) {
+                                    position: absolute;
+                                    top: 135px;
+                                }
+
+                                .offer-detail-container .offer-price > div:nth-child(2) {
+                                    margin-right: 10px;
+                                    position: absolute;
+                                    top: 135px;
+                                    right: 10px;
+                                    text-decoration: line-through;
+                                }
+
+                                .offer-detail-container .offer-price > div:nth-child(3) {
+                                    margin-right: 10px;
+                                    position: absolute;
+                                    top: 155px;
+                                    right: 10px;
+                                    font-weight: bold;
+                                    color: #fc0453;
+                                }
+
+                            .offer-detail-container .highlight-btn {
+                                position: absolute;
+                                width: 400px;
+                                height: 40px;
+                                top: 189px;
+                                border: none;
+                                border-radius: 5px;
+                                background: #fc0453;
+                                color: white;
+                                --font-weight: bold;
+                                opacity: 0.8;
+                            }
+
+
+                            .offer-form > .back-btn-container {
+                                margin: 50px auto 100px auto;
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            .offer-form > .back-btn-container > .back-btn {
+                                background: #fc0453;
+                                border-radius: 28px;
+                                cursor: pointer;
+                                color: #ffffff;
+                                text-align: center;
+                                width: 150px;
+                                height: 50px;
+                                line-height: 50px;
+                                text-decoration: none;
+                                padding: 16px 60px;
+                            }
+
+                            .offer-form > .back-btn-container > .back-btn:hover {
+                                opacity: 0.7;
+                            }
+
+/********************************************/
