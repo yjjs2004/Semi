@@ -16,26 +16,26 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		/*
-		 * ¿äÃ»µÈ ÀüÃ¼ URL Áß¿¡¼­ Æ÷Æ® ¹øÈ£ ´ÙÀ½ºÎÅÍ ¸¶Áö¸· ¹®ÀÚ¿­±îÁö ¹ÝÈ¯µË´Ï´Ù. ¿¹)contextPath°¡ "/JspProject" ÀÎ°æ¿ì
-		 * http://localhost:8088/JspProject/login.net·Î ¿äÃ»ÇÏ¸é RequestURI´Â
-		 * "/JspProject/login.net" ¹ÝÈ¯µË´Ï´Ù.
+		 * ï¿½ï¿½Ã»ï¿½ï¿½ ï¿½ï¿½Ã¼ URL ï¿½ß¿ï¿½ï¿½ï¿½ ï¿½ï¿½Æ® ï¿½ï¿½È£ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½. ï¿½ï¿½)contextPathï¿½ï¿½ "/JspProject" ï¿½Î°ï¿½ï¿½
+		 * http://localhost:8088/JspProject/login.netï¿½ï¿½ ï¿½ï¿½Ã»ï¿½Ï¸ï¿½ RequestURIï¿½ï¿½
+		 * "/JspProject/login.net" ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½.
 		 */
 
 		String RequestURI = request.getRequestURI();
 		System.out.println("RequestURI = " + RequestURI);
 
-		// getGontextPath() : ÄÁÅØ½ºÆ® °æ·Î°¡ ¹ÝÈ¯µË´Ï´Ù.
-		// contextPath´Â "/JspProject"°¡ ¹ÝÈ¯µË´Ï´Ù.
+		// getGontextPath() : ï¿½ï¿½ï¿½Ø½ï¿½Æ® ï¿½ï¿½Î°ï¿½ ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½.
+		// contextPathï¿½ï¿½ "/JspProject"ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½.
 		String contextPath = request.getContextPath();
 		System.out.println("contextPath = " + contextPath);
 
-		// RequestURI¿¡¼­ ÄÁÅØ½ºÆ® °æ·Î ±æÀÌ °ªÀÇ ÀÎµ¦½º À§Ä¡ÀÇ ¹®ÀÚºÎÅÍ
-		// ¸¶Áö¸· À§Ä¡ ¹®ÀÚ±îÁö ÃßÃâÇÕ´Ï´Ù.
-		// command´Â "/login.net" ¹ÝÈ¯µË´Ï´Ù.
+		// RequestURIï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+		// commandï¿½ï¿½ "/login.net" ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½.
 		String command = RequestURI.substring(contextPath.length());
 		System.out.println("command = " + command);
 
-		// ÃÊ±âÈ­
+		// ï¿½Ê±ï¿½È­
 		ActionForward forward = null;
 		Action action = null;
 
@@ -63,6 +63,9 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		case "/personinfo.com":
 			action = new PersonInfoAction();
 			break;
+		case "/main.com":
+			action = new PersonMainPageAction();
+			break;
 		/*
 		 * 
 		 * case"/loginProcess.net": action = new MemberLoginProcessAction(); break;
@@ -79,7 +82,7 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
-			} else {// Æ÷¿öµù µË´Ï´Ù.
+			} else {// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë´Ï´ï¿½.
 				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
 				dispatcher.forward(request, response);
 			}
