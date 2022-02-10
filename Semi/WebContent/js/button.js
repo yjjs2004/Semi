@@ -1,22 +1,35 @@
 
 $(function (){	
-	//체크인 
-	$('#checkIn').click(function(){
-		$("#check").text('체크인');
-		$("#popup-calendar").css('display','flex').hide().fadeIn();	
+	//체크인
+	$("#datepicker1").datepicker({
+		numberOfMonths : 1,
+		onSelect : function(selected) {
+			$("#datepicker2").datepicker("option", "minDate", selected)
+		}
 	});
-	//체크아웃 
-	$('#checkOut').click(function(){
-		$("#check").text('체크아웃');
-		$("#popup-calendar").css('display','flex').hide().fadeIn();
+	//체크아웃
+	$("#datepicker2").datepicker({
+		numberOfMonths : 1,
+		onSelect : function(selected) {
+			$("#datepicker1").datepicker("option", "maxDate", selected)
+		}
 	});
 	//인원수 
 	$('#people').click(function(){
 		alert('인원수');
 	});
 	//검색
-	$('#search').click(function(){
-		alert('검색');
+	$('#search').click(function(){		
+		var checkIn =	$('#datepicker1').val();
+		var checkOut =	$('#datepicker2').val();
+		if(checkIn == ''){
+			alert('체크인하세요');
+		}else if(checkOut == ''){
+			alert('체크아웃하세요');
+		}else{
+			alert("체크인 : "+checkIn+", 체크아웃 : "+checkOut)
+		}
+		
 	});
 	$('#search2').click(function(){
 		alert('검색2');
