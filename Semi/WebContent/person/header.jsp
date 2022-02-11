@@ -111,7 +111,7 @@ header {
 					<li>
 						<a class="nav-link" data-toggle="dropdown" href="#"> 1 </a>
 					<li>
-						<a class="nav-link" href="#"> 2 </a>
+						<a class="nav-link" href="#">장바구니</a>
 					</li>
 					<li>
 						<a class="nav-link" href="login.com"role="button">Login</a>
