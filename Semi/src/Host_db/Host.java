@@ -11,9 +11,9 @@ public class Host {
 
 	private String host_business;
 	private String host_email;
-	private String business_name;
+	private String business_name;			//개인사업자
 	private String business_num;
-	private String corporation_name;
+	private String corporation_name;		//법인사업자
 	private String corporation_num;
 	
 	public String getHost_id() {
