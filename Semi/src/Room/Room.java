@@ -3,56 +3,71 @@ package Room;
 public class Room {
 	
 	private String name;
-	private String phone;
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	private String location;
+	private String addrzipnum;
+	private String addrbasic;
+	private String addrdetail;
 	private String room_type;
-	
-	private String filename;
-	private String fileroute;
-
+	private String room_text;
+	private String room_img;
 	private String rooms_name;
 	private String personnel;
 	private String bedcount;
 	private String price;
-	
-	private String filename_a;
-	private String fileroute_b;
-
+	private String rooms_img1;
+	private String rooms_img2;
+	public String getRoom_text() {
+		return room_text;
+	}
+	public void setRoom_text(String room_text) {
+		this.room_text = room_text;
+	}
+	public String getRoom_img() {
+		return room_img;
+	}
+	public void setRoom_img(String room_img) {
+		this.room_img = room_img;
+	}
+	public String getRooms_img1() {
+		return rooms_img1;
+	}
+	public void setRooms_img1(String rooms_img1) {
+		this.rooms_img1 = rooms_img1;
+	}
+	public String getRooms_img2() {
+		return rooms_img2;
+	}
+	public void setRooms_img2(String rooms_img2) {
+		this.rooms_img2 = rooms_img2;
+	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getLocation() {
-		return location;
+	public String getAddrzipnum() {
+		return addrzipnum;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setAddrzipnum(String addrzipnum) {
+		this.addrzipnum = addrzipnum;
+	}
+	public String getAddrbasic() {
+		return addrbasic;
+	}
+	public void setAddrbasic(String addrbasic) {
+		this.addrbasic = addrbasic;
+	}
+	public String getAddrdetail() {
+		return addrdetail;
+	}
+	public void setAddrdetail(String addrdetail) {
+		this.addrdetail = addrdetail;
 	}
 	public String getRoom_type() {
 		return room_type;
 	}
 	public void setRoom_type(String room_type) {
 		this.room_type = room_type;
-	}
-	public String getFilename() {
-		return filename;
-	}
-	public void setFilename(String filename) {
-		this.filename = filename;
-	}
-	public String getFileroute() {
-		return fileroute;
-	}
-	public void setFileroute(String fileroute) {
-		this.fileroute = fileroute;
 	}
 	public String getRooms_name() {
 		return rooms_name;
@@ -78,18 +93,5 @@ public class Room {
 	public void setPrice(String price) {
 		this.price = price;
 	}
-	public String getFilename_a() {
-		return filename_a;
-	}
-	public void setFilename_a(String filename_a) {
-		this.filename_a = filename_a;
-	}
-	public String getFileroute_b() {
-		return fileroute_b;
-	}
-	public void setFileroute_b(String fileroute_b) {
-		this.fileroute_b = fileroute_b;
-	}
-	
 
 }

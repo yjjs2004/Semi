@@ -1,2 +1,2 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<jsp:forward page="/main.com"/>
+<jsp:forward page="/reg.net"/>

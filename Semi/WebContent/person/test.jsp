@@ -40,7 +40,7 @@
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
 <style type="text/css">/* Chart.js */
-@
+
 keyframes chartjs-render-animation {
 	from {opacity: .99
 }
@@ -294,7 +294,7 @@ button {
 .varDiv {
 	float: left;
 	width: 6rem;
-}
+} 
 </style>
 <jsp:include page="header.jsp" />
 </head>

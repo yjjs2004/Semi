@@ -11,19 +11,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
     <title>숙소현황 | 틈을 채우다</title>
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/company/userInfo/myAccommodationLists.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/js/slideShow.js"></script> --%>
+<script src="${pageContext.request.contextPath}/js/button.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/js/map.js"></script> --%>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+<link rel="stylesheet"
+	href="plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet"
+	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet"
+	href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<link rel="stylesheet"
+	href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jqvmap/jqvmap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/adminlte.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/summernote/summernote-bs4.min.css">
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c751f51d711b8cb1563dba0f5bdaf7c6&librarys=services"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	
+	 <jsp:include page="header.jsp" />
+	 
+	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/company/userInfo/myAccommodationLists.css">  
 </head>
 
 <body>
-    <jsp:include page="header1.jsp" />
+   
 
     <section class="container-sec">
-        <div class="container">
+        <div class="container2">
             <aside id="aside" class="aside">
                 <!-- <h1>게시판</h1> -->
                 <ul style="width:230px;">

@@ -11,9 +11,9 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 <!-- Font Awesome Icons -->
-<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
-<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/adminlte.min.css">
 <style>
 header {
 	position: fixed;
@@ -31,10 +31,10 @@ header {
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-md navbar-light navbar-white">
-			<div class="container">
+		<nav class="navbar navbar-expand-md navbar-light navbar-white" style="height:100px">
+			<div class="container" >
 				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
-					src="../image/로고.png" width="65px" height="65px" alt="AdminLTE Logo"
+					src="${pageContext.request.contextPath}/image/로고1.png" width="65px" height="65px" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8">
 				</a>
  

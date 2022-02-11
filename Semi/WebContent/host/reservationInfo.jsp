@@ -11,9 +11,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>예약관리 | 틈을 채우다</title>
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/company/userInfo/reservationInfo.css">
+    <link rel="stylesheet" href="css2/reset.css">
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/company/userInfo/reservationInfo.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
@@ -24,7 +24,7 @@
     <jsp:include page="header.jsp"/>
 
     <section class="container-sec">
-        <div class="container">
+        <div class="container2">
             <aside id="aside" class="aside">
                 <!-- <h1>게시판</h1> -->
                 <ul style="width:230px;">
