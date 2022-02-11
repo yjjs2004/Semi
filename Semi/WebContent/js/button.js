@@ -16,7 +16,7 @@ $(function (){
 	});
 	//인원수 
 	$('#people').click(function(){
-		alert('인원수');
+
 	});
 	//검색
 	$('#search').click(function(){		

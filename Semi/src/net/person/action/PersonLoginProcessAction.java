@@ -21,8 +21,13 @@ public class PersonLoginProcessAction implements Action {
 		String pass =request.getParameter("pass");
 		PersonDAO pdao=new PersonDAO();
 		int  result=pdao.isId(id,pass);
+<<<<<<< HEAD
 		System.out.println("°á°ú´Â"+result);
 		if(result==-1) {
+=======
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½"+result);
+		if(result==1) {
+>>>>>>> branch 'master' of https://github.com/yjjs2004/Semi.git
 			HttpSession session=request.getSession();
 			session.setAttribute("id", id);
 			
@@ -40,9 +45,15 @@ public class PersonLoginProcessAction implements Action {
 			forward.setPath("main.com");
 			return forward;
 	}else {
+<<<<<<< HEAD
 		String message="ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.";
 		if(result==1) {
 			message="¾ÆÀÌµð°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.";
+=======
+		String message="ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.";
+		if(result==-1) {
+			message="ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.";
+>>>>>>> branch 'master' of https://github.com/yjjs2004/Semi.git
 			response.setContentType("text/html;charset=utf-8");
 			PrintWriter out=response.getWriter();
 			out.println("<script>");

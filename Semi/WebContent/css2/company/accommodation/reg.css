@@ -30,7 +30,14 @@ main{
     }
     
         .content-box .insert-box{
-            height: 62px;
+            
+            padding-bottom: 10px;
+            padding-left: 100px;
+            color: black;
+            
+        }
+         .content-box .insert-box1{
+            
             padding-bottom: 10px;
             padding-left: 100px;
             color: black;

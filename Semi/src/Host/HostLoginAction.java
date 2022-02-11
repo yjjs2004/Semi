@@ -13,7 +13,11 @@ public class HostLoginAction implements Action {
 			throws ServletException, IOException {
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
+<<<<<<< HEAD
 		forward.setPath("host/loginform.jsp");
+=======
+		forward.setPath("person/loginForm.jsp");
+>>>>>>> branch 'master' of https://github.com/yjjs2004/Semi.git
 		return forward;
 	}
 

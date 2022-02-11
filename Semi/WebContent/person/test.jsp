@@ -40,7 +40,7 @@
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
 <style type="text/css">/* Chart.js */
-@
+
 keyframes chartjs-render-animation {
 	from {opacity: .99
 }
@@ -294,7 +294,7 @@ button {
 .varDiv {
 	float: left;
 	width: 6rem;
-}
+} 
 </style>
 <jsp:include page="header.jsp" />
 </head>
@@ -324,7 +324,9 @@ button {
 					id="datepicker2" style="width: 6rem">
 			</div>
 			<div class="varDiv" style="margin-top: 1rem">
+			<form action="basket.test">
 				<button id="people">인원수</button>
+			</form>
 				<label>
 					<button id="search">
 						<i class="fas fa-search"></i>

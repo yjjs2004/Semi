@@ -4,7 +4,7 @@
     background: #F9FBFF;
 }
 
-    .container {
+    .container2 {
         width: 1200px;
         min-height: 500px;
         margin:0 auto;
@@ -15,7 +15,7 @@
         .aside {
             width: 300px;
             height: 330px;
-            margin-top: 70px;
+           
             padding-left: 40px;
         }
 
