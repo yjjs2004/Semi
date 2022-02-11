@@ -16,12 +16,12 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/adminlte.min.css">
 <style>
 header {
-	position: fixed;
+	
 	top: 0;
 	width: 100%;
 	left: 0;
 	right: 0;
-	z-index: 20;
+	
 	border-bottom: 1px solid #e6e6e6;
 	/* 생략 */ 
 }
@@ -33,7 +33,7 @@ header {
 	<header>
 		<nav class="navbar navbar-expand-md navbar-light navbar-white" style="height:100px">
 			<div class="container" >
-				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
+				<a href="main.com" class="navbar-brand"> <img
 					src="${pageContext.request.contextPath}/image/로고1.png" width="65px" height="65px" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8">
 				</a>
@@ -48,7 +48,7 @@ header {
 				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 					<!-- Left navbar links -->
 					<ul class="navbar-nav">
-						<li class="nav-item"><a href="http://localhost:8088/Semi/person/mainPage.jsp" class="nav-link">Home</a>
+						<li class="nav-item"><a href="main.com" class="nav-link">Home</a>
 						</li>
 						<li class="nav-item"><a href="#" class="nav-link">Contact</a>
 						</li>
@@ -109,41 +109,16 @@ header {
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
 				<li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="login.com"
-						role="button">로그인
-					</a></li>
-					<!-- Messages Dropdown Menu -->
-					<li class="nav-item dropdown"><a class="nav-link"
-						data-toggle="dropdown" href="#"> <i class="fas fa-comments"></i>
-							<span class="badge badge-danger navbar-badge">3</span>
-					</a>
+						data-widget="control-sidebar" data-slide="true" href="main.com"
+						role="button">${id }님(로그아웃)</a></li>
 						
 					<!-- Notifications Dropdown Menu -->
-					<li class="nav-item dropdown"><a class="nav-link"
-						data-toggle="dropdown" href="#"> <i class="far fa-bell"></i> <span
-							class="badge badge-warning navbar-badge">15</span>
-					</a>
-						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-							<span class="dropdown-header">15 Notifications</span>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-envelope mr-2"></i> 4 new messages <span
-								class="float-right text-muted text-sm">3 mins</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-users mr-2"></i> 8 friend requests <span
-								class="float-right text-muted text-sm">12 hours</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-file mr-2"></i> 3 new reports <span
-								class="float-right text-muted text-sm">2 days</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item dropdown-footer">See All
-								Notifications</a>
-						</div></li>
+					<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+			data-toggle="dropdown">관리자</a>
+						<div class="dropdown-menu">
+			<a class="dropdown-item" href="memberList.net">회원정보</a>
+			<a class="dropdown-item" href="BoardList.bo">게시판</a>
+			</div></li>
 					
 				
 			

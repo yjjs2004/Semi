@@ -45,20 +45,6 @@
                         <form action="updateInfo" method="post">
                    
                             <div class="reg-form-container">
-                                <div class="reg-form-item">
-                                    <label style="font-size: 12px;" for="email" title="이메일">
-                                        <em style="color: red;">*</em>
-                                        이메일
-                                    </label>
-                                    <div class="input-box">
-                                        <div>
-                                            <input type="email" value="${c.email }" disabled class="email"  
-                                            placeholder="aaa@example.com" id="email" name="email" autocorrect="off" 
-                                            autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
-                                            <span class="caution-mention">올바른 이메일 형식을 입력해주세요</span>
-                                        </div>
-                                    </div>
-                                </div>
                                  <div class="reg-form-item">
                                     <label style="font-size: 12px;" for="name" title="아이디">
                                         <em style="color: red;">*</em>
@@ -66,8 +52,8 @@
                                     </label>
                                     <div class="input-box">
                                         <div>
-                                            <input type="text" value="${c.id }" disabled class="id" 
-                                            placeholder="/admin" id="id" autocorrect="off" 
+                                            <input type="text" value="${host_id }" disabled class="id" 
+                                            id="id" autocorrect="off" 
                                             autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
                                             
                                         </div>
@@ -84,6 +70,21 @@
                                             placeholder="최소8자 영문/숫자/특수문자 필수" id="password" name="password" autocorrect="off" 
                                             autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
                                             <span class="caution-mention">최소8자 영문/숫자/특수문자 필수입니다</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reg-form-container">
+                                <div class="reg-form-item">
+                                    <label style="font-size: 12px;" for="email" title="이메일">
+                                        <em style="color: red;">*</em>
+                                        이메일
+                                    </label>
+                                    <div class="input-box">
+                                        <div>
+                                            <input type="email"  class="email"  
+                                            placeholder="aaa@example.com" id="email" name="email" autocorrect="off" 
+                                            autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
+                                            <span class="caution-mention">올바른 이메일 형식을 입력해주세요</span>
                                         </div>
                                     </div>
                                 </div>
