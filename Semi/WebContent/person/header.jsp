@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+		<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +15,8 @@
 <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
 <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>
 header {
 	position: fixed;
@@ -109,6 +112,23 @@ header {
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
 					<!-- Messages Dropdown Menu -->
+					<c:if test="${!empty id }">
+				   <li class="nav-item"><a class="nav-link"
+						data-widget="control-sidebar" data-slide="true" href="main.com"
+						role="button">${id }님(로그아웃)</a></li>
+						<c:if test="${id=='admin' }">
+							<!-- Notifications Dropdown Menu -->
+							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
+					            data-toggle="dropdown">관리자</a>
+								<div class="dropdown-menu">
+							<a class="dropdown-item" href="memberList.net">회원정보</a>
+							<a class="dropdown-item" href="BoardList.bo">게시판</a>
+							</div></li>
+						</c:if>
+					</c:if>
+				
+					
+					
 					<li class="nav-item dropdown"><a class="nav-link"
 						data-toggle="dropdown" href="#"> <i class="fas fa-comments"></i>
 							<span class="badge badge-danger navbar-badge">3</span>
