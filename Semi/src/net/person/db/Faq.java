@@ -8,6 +8,13 @@ public class Faq {
 	private String FAQ_CONTENT;
 	private String FAQ_DATE;
 	private String FAQ_COMPLETE;
+	private int SEQ;
+	public int getSEQ() {
+		return SEQ;
+	}
+	public void setSEQ(int sEQ) {
+		SEQ = sEQ;
+	}
 	public String getFAQ_ID() {
 		return FAQ_ID;
 	}

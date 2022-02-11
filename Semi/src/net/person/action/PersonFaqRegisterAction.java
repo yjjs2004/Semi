@@ -16,7 +16,8 @@ public class PersonFaqRegisterAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String id=request.getParameter("id");
+		HttpSession session= request.getSession();
+		String id=(String) session.getAttribute("id");
 		String faq=request.getParameter("faq");
 		String subject=request.getParameter("subject");
 		String content=request.getParameter("editordata");
@@ -44,7 +45,7 @@ public class PersonFaqRegisterAction implements Action {
 		out.println("<script>");
 		if(result==1) {
 			out.println("alert('문의가 등록되었습니다..')");
-			out.println("location.href='login.com'");
+			out.println("location.href='faqinfo.com'");
 		}
 		out.println("</script>");
 		out.close();

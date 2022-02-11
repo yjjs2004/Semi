@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -164,7 +165,7 @@ public class PersonDAO {
 			String sql = "insert into faq"
 					+ "(FAQ_ID, seq, FAQ_KINDS, "
 					+ "FAQ_SUBJECT, FAQ_CONTENT, "
-					+ "FAQ_COMPLETE) values(?,faq_seq.nextval,?,?,?,f)";
+					+ "FAQ_COMPLETE) values(?,faq_seq.nextval,?,?,?,'f')";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, f.getFAQ_ID());
 			pstmt.setString(2, f.getFAQ_KINDS());
@@ -244,8 +245,7 @@ public class PersonDAO {
 		return p;
 	}
 
-	public Faq Faq_info(String id) {
-		Faq f = null;
+	public ArrayList<Faq> Faq_info(String id) {
 		Connection con=null;
 		PreparedStatement pstmt=null;
 		ResultSet rs=null;
@@ -257,16 +257,19 @@ public class PersonDAO {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
-
-			if (rs.next()) {
-				f=new Faq();
+            ArrayList<Faq> list = new ArrayList<Faq>();
+			while (rs.next()) {
+				Faq f =new Faq();
 				f.setFAQ_ID(rs.getString(1));
-				f.setFAQ_KINDS(rs.getString(2));
-				f.setFAQ_SUBJECT(rs.getString(3));
-				f.setFAQ_CONTENT(rs.getString(4));
-				f.setFAQ_DATE(rs.getString(5));
-				f.setFAQ_COMPLETE(rs.getString(6));
+				f.setSEQ(rs.getInt(2));
+				f.setFAQ_KINDS(rs.getString(3));
+				f.setFAQ_SUBJECT(rs.getString(4));
+				f.setFAQ_CONTENT(rs.getString(5));
+				f.setFAQ_DATE(rs.getString(6));
+				f.setFAQ_COMPLETE(rs.getString(7));
+				list.add(f);
 			}
+			return list;
 		}catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -289,7 +292,7 @@ public class PersonDAO {
 					ex.printStackTrace();
 				}
 		}
-		return f;
+		return null;
 	}
 
 	public int isId(String id, String pass) {
@@ -302,7 +305,7 @@ public class PersonDAO {
 	{
 		conn = ds.getConnection();
 
-		String sql = "select PERSONAL_ID, PERSONAL_PASSWORD from personal where id = PERSONAL_ID";
+		String sql = "select PERSONAL_ID, PERSONAL_PASSWORD from personal where personal_id = ?";
 		pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, id);
 		rs = pstmt.executeQuery();	

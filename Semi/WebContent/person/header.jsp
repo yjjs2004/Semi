@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,6 +109,19 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+				  <c:if test="${!empty id }">
+				    <li class="nav-item dropdown"><a class="nav-link"
+						data-toggle="dropdown" href="#"> 
+							${id }님
+					</a>
+				     </li>
+				     
+				     <li class="nav-item dropdown"><a class="nav-link"
+						data-toggle="dropdown" href="logout.com"> 
+							로그아웃
+					</a>
+				     </li>
+				      </c:if>
 					<!-- Messages Dropdown Menu -->
 					<li class="nav-item dropdown"><a class="nav-link"
 						data-toggle="dropdown" href="#"> <i class="fas fa-comments"></i>

@@ -22,14 +22,14 @@
   </style>
 </head>
 <body>
-<form method="post" action="faqregist.net">
+<form method="post" action="faqregist.com">
 <!--  아이디 부분 추가해야됨 -->
 <label for="option">문의 종류</label>
 <select id="faq" name="faq" size="1">
-<option value="">환불</option>
-<option value="">예약변경</option>
-<option value="">결제</option>
-<option value="">잘못된 정보</option>
+<option value="1">환불</option>
+<option value="2">예약변경</option>
+<option value="3">결제</option>
+<option value="4">잘못된 정보</option>
 </select>
 <br>
 <b>제목</b>
@@ -37,6 +37,7 @@
 <div class="container">
   <textarea class="summernote" name="editordata"></textarea>    
 </div>
+<input type="submit" value="전송">
 </form>
 <script>
 $('.summernote').summernote({

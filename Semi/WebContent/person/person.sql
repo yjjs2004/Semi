@@ -12,6 +12,7 @@ PERSONAL_EMAIL varchar2(30)
 );
 select * from personal
 select * from faq
+delete from faq;
 create table cs(
 CS_LIST VARCHAR2(15),
 CS_DATE date default sysdate,

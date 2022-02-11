@@ -56,14 +56,17 @@ button:focus {
 	padding: 14px 20px;
 	background-color: #3a3ad3;
 }
+
 .facebook {
 	padding: 14px 20px;
 	background-color: #343476;
 }
+
 .naver {
 	padding: 14px 20px;
 	background-color: #1eb725;
 }
+
 .kakao {
 	padding: 14px 20px;
 	background-color: #e5d75a;
@@ -116,7 +119,7 @@ span {
 <script>
 	$(function() {
 		$(".join").click(function() {
-			location.href = "join.net";
+			location.href = "join.com";
 		});
 
 		var id = '${id}';

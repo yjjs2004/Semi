@@ -13,9 +13,11 @@
 <title>문의 내역</title>
 </head>
 <body>
+<jsp:include page="header.jsp"></jsp:include>
 <div class="container">
+<br><br><br><br>
   <h2>문의 내역</h2>
-  <p>${faqinfo.faq_id } 님의 문의 내역입니다.</p>            
+  <p>${id } 님의 문의 내역입니다.</p>            
   <table class="table table-hover">
     <thead>
       <tr>
@@ -26,13 +28,14 @@
       </tr>
     </thead>
     <tbody>
-  
+  <c:forEach items="${faqinfo }" var="f">
       <tr>
-        <td>${faqinfo.seq}</td>
-        <td>${faqinfo.FAQ_SUBJECT }</td>
-        <td>${faqinfo.FAQ_DATE }</td>
-        <td>${faqinfo.FAQ_COMPLETE}</td>
+        <td>${f.SEQ}</td>
+        <td>${f.FAQ_SUBJECT }</td>
+        <td>${f.FAQ_DATE }</td>
+        <td>${f.FAQ_COMPLETE}</td>
       </tr>
+      </c:forEach>
     </tbody>
   </table>
 </div>

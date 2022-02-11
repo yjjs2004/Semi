@@ -22,7 +22,7 @@ public class PersonLoginProcessAction implements Action {
 		PersonDAO pdao=new PersonDAO();
 		int  result=pdao.isId(id,pass);
 		System.out.println("결과는"+result);
-		if(result==1) {
+		if(result==-1) {
 			HttpSession session=request.getSession();
 			session.setAttribute("id", id);
 			
@@ -37,11 +37,11 @@ public class PersonLoginProcessAction implements Action {
 			}
 			
 			forward.setRedirect(true);
-			forward.setPath("person/test.jsp");
+			forward.setPath("main.com");
 			return forward;
 	}else {
 		String message="비밀번호가 일치하지 않습니다.";
-		if(result==-1) {
+		if(result==1) {
 			message="아이디가 존재하지 않습니다.";
 			response.setContentType("text/html;charset=utf-8");
 			PrintWriter out=response.getWriter();
