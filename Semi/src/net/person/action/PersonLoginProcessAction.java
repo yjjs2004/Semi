@@ -21,7 +21,7 @@ public class PersonLoginProcessAction implements Action {
 		String pass =request.getParameter("pass");
 		PersonDAO pdao=new PersonDAO();
 		int  result=pdao.isId(id,pass);
-		System.out.println("°á°ú´Â"+result);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½"+result);
 		if(result==1) {
 			HttpSession session=request.getSession();
 			session.setAttribute("id", id);
@@ -37,12 +37,12 @@ public class PersonLoginProcessAction implements Action {
 			}
 			
 			forward.setRedirect(true);
-			forward.setPath("person/test.jsp");
+			forward.setPath("main.com");
 			return forward;
 	}else {
-		String message="ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.";
+		String message="ï¿½ï¿½Ð¹ï¿½È£ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.";
 		if(result==-1) {
-			message="¾ÆÀÌµð°¡ Á¸ÀçÇÏÁö ¾Ê½À´Ï´Ù.";
+			message="ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.";
 			response.setContentType("text/html;charset=utf-8");
 			PrintWriter out=response.getWriter();
 			out.println("<script>");

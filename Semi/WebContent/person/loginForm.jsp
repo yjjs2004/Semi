@@ -56,6 +56,10 @@ button:focus {
 	padding: 14px 20px;
 	background-color: #3a3ad3;
 }
+.host_join {
+	padding: 14px 20px;
+	background-color: #3a97d3;
+}
 .facebook {
 	padding: 14px 20px;
 	background-color: #343476;
@@ -116,9 +120,11 @@ span {
 <script>
 	$(function() {
 		$(".join").click(function() {
-			location.href = "join.net";
+			location.href = "join.com";
 		});
-
+		$(".host_join").click(function() {
+			location.href = "host_join.net";
+		});
 		var id = '${id}';
 		if (id) {
 			$("#id").val(id);
@@ -140,6 +146,7 @@ span {
 		<div class="clearfix">
 			<button type="submit" class="submitbtn">로그인</button>
 			<button type="button" class="join">회원가입</button>
+			<button type="button" class="host_join">기업회원가입</button>
 			<br> <br>
 			<button type="button" class="facebook">FaceBook</button>
 			<button type="button" class="naver">Naver</button>

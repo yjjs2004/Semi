@@ -8,21 +8,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>회원정보수정</title>
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/company/userInfo/updateInfo.css">
+    <link rel="stylesheet" href="css2/reset.css">
+    <link rel="stylesheet" href="css2/layout.css">
+    <link rel="stylesheet" href="css2/company/userInfo/updateInfo.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 	<script src="/js/company/userInfo/updateInfo.js"></script>
-
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/js/slideShow.js"></script> --%>
+<script src="${pageContext.request.contextPath}/js/button.js"></script>
+<%-- <script src="${pageContext.request.contextPath}/js/map.js"></script> --%>
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+<link rel="stylesheet"
+	href="plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet"
+	href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<link rel="stylesheet"
+	href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<link rel="stylesheet"
+	href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/jqvmap/jqvmap.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/adminlte.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/daterangepicker/daterangepicker.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/plugins/summernote/summernote-bs4.min.css">
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c751f51d711b8cb1563dba0f5bdaf7c6&librarys=services"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<link rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="plugins/jquery/jquery.min.js"></script>
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
     <jsp:include page="header.jsp"/>
 
     <section class="container-sec">
-        <div class="container">
+        <div class="container2">
             <aside id="aside" class="aside">
                 <!-- <h1>게시판</h1> -->
                 <ul style="width:230px;">
@@ -45,20 +76,6 @@
                         <form action="updateInfo" method="post">
                    
                             <div class="reg-form-container">
-                                <div class="reg-form-item">
-                                    <label style="font-size: 12px;" for="email" title="이메일">
-                                        <em style="color: red;">*</em>
-                                        이메일
-                                    </label>
-                                    <div class="input-box">
-                                        <div>
-                                            <input type="email" value="${c.email }" disabled class="email"  
-                                            placeholder="aaa@example.com" id="email" name="email" autocorrect="off" 
-                                            autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
-                                            <span class="caution-mention">올바른 이메일 형식을 입력해주세요</span>
-                                        </div>
-                                    </div>
-                                </div>
                                  <div class="reg-form-item">
                                     <label style="font-size: 12px;" for="name" title="아이디">
                                         <em style="color: red;">*</em>
@@ -66,8 +83,8 @@
                                     </label>
                                     <div class="input-box">
                                         <div>
-                                            <input type="text" value="${c.id }" disabled class="id" 
-                                            placeholder="/admin" id="id" autocorrect="off" 
+                                            <input type="text" value="${host_id }" disabled class="id" 
+                                            id="id" autocorrect="off" 
                                             autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
                                             
                                         </div>
@@ -84,6 +101,21 @@
                                             placeholder="최소8자 영문/숫자/특수문자 필수" id="password" name="password" autocorrect="off" 
                                             autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
                                             <span class="caution-mention">최소8자 영문/숫자/특수문자 필수입니다</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="reg-form-container">
+                                <div class="reg-form-item">
+                                    <label style="font-size: 12px;" for="email" title="이메일">
+                                        <em style="color: red;">*</em>
+                                        이메일
+                                    </label>
+                                    <div class="input-box">
+                                        <div>
+                                            <input type="email"  class="email"  
+                                            placeholder="aaa@example.com" id="email" name="email" autocorrect="off" 
+                                            autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
+                                            <span class="caution-mention">올바른 이메일 형식을 입력해주세요</span>
                                         </div>
                                     </div>
                                 </div>
@@ -223,51 +255,7 @@
         </main>
     </section> -->
 
-    <section class="sec_footer">
-        <footer>
-            <div>
-                <ul>
-                    <li>
-                        <a href="">회사소개</a>
-                        <span>|</span>
-                    </li>
-                    <li>
-                        <a href="">이용약관</a>
-                        <span>|</span>
-                    </li>
-                    <li>
-                        <a href="">개인정보처리방침</a>
-                        <span>|</span>
-                    </li>
-                    <li>
-                        <a href="">사업자정보확인</a>
-                        <span>|</span>
-                    </li>
-                    <li>
-                        <a href="">여기어때 마케팅센터</a>
-                        <span>|</span>
-                    </li>
-                    <li>
-                        <a href="">액티비티 호스트센터</a>
-                        <span>|</span>
-                    </li>
-                    <li><a href="">콘텐츠산업진흥법에의한 표시</a></li>
-                </ul>
-
-                <p><b>고객행복센터 1577-8282</b> 오전 09:00 ~ 오후18:00</p>
-
-                <address>
-                    <span>(주)TEUM</span>
-                    주소 : 서울특별시 종로구 인사동길 12 대일빌딩 15층
-                    <br>대표이사 : 신중언 | 사업자등록번호 777-11-45678
-                    <br>통신판매번호 : 2020-서울강남-12345 | 관광사업자 등록번호 : 제 1324-55호
-                    <br>전화번호 : 010-1111-2222
-                    <br>전자우편주소 : teum@teum.co.kr
-                    <br>Copyright TEUM COMPANY Corp. All rights reserved.
-                </address>
-            </div>
-        </footer>
-    </section>
+    <jsp:include page="pooter.jsp"/>
 </body>
 
 </html>

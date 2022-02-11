@@ -44,7 +44,7 @@ public class HostLoginProcessAction implements Action {
 			}
 			forward.setRedirect(true);
 			//forward.setPath("BoardList.bo");
-			forward.setPath("BoardList.bo");
+			forward.setPath("main.com");
 			return forward;
 		}else {
 			String message = "비밀번호가 일치하지 않습니다.";

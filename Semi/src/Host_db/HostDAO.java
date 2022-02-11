@@ -93,9 +93,10 @@ private DataSource ds;
 				h = new Host();
 				h.setHost_id(rs.getString(1));
 				h.setHost_password(rs.getString(2));
-				h.setHost_name(rs.getString(3));
-				h.setHost_birth(rs.getString(4));
-				h.setHost_email(rs.getString(5));
+				h.setHost_email(rs.getString(3));
+				h.setHost_name(rs.getString(4));
+				h.setHost_birth(rs.getString(5));
+				
 			}
 			
 		}catch(Exception e) {
@@ -124,8 +125,39 @@ private DataSource ds;
 		return h;
 	}
 	public int update(Host m) {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection con=null;
+		PreparedStatement pstmt =null;
+		int result=0;
+		try {
+			con =ds.getConnection();
+			
+			String sql = "update host set host_password =?,  =?, host_email=?, host_name=?, host_birth "
+					+" where host_id = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, m.getHost_password());
+			pstmt.setString(2, m.getHost_email());
+			pstmt.setString(3, m.getHost_name());
+			pstmt.setString(4, m.getHost_birth());
+			pstmt.setString(5, m.getHost_id());
+			
+			result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(pstmt !=null)
+				try {
+					pstmt.close();
+				}catch(SQLException ex) {
+					ex.printStackTrace();
+				}
+			if(con != null)
+				try {
+					con.close();
+				}catch(SQLException ex) {
+					ex.printStackTrace();
+				}
+		}
+		return result;
 	}
 	public int isId(String id, String pass) {
 		Connection conn = null;

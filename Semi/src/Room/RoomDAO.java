@@ -33,24 +33,24 @@ private DataSource ds;
 			con = ds.getConnection();
 			System.out.println("getConnection : insert()");
 			pstmt = con.prepareStatement( "INSERT INTO ROOM "
-	+ "(name, phone, location, filename, fileroute, rooms_name, personnel, bedcount, price, "
-	+ "filename_a, fileroute_b) "
-					+ "VALUES (?,?,?,?,?,?,?,?,?,?,?)"
+	+ "(name,addrzipnum, addrbasic, addrdetail, room_type, room_text, room_img,"
+	+ "rooms_name, personnel, bedcount, price, rooms_img1, rooms_img2) "
+	+ "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)"
 					);
 			
 			pstmt.setString(1, r.getName());
-			pstmt.setString(2, r.getPhone());
-			pstmt.setString(3, r.getLocation());
-			pstmt.setString(4, r.getFilename());
-			
-			pstmt.setString(5, r.getFileroute());
-			pstmt.setString(6, r.getRooms_name());
-			pstmt.setString(7, r.getPersonnel());
-			
-			pstmt.setString(8, r.getBedcount());
-			pstmt.setString(9, r.getPrice());
-			pstmt.setString(10, r.getFilename_a());
-			pstmt.setString(11, r.getFileroute_b());
+			pstmt.setString(2, r.getAddrzipnum());
+			pstmt.setString(3, r.getAddrbasic());
+			pstmt.setString(4, r.getAddrdetail());
+			pstmt.setString(5, r.getRoom_type());
+			pstmt.setString(6, r.getRoom_text());
+			pstmt.setString(7, r.getRoom_img());
+			pstmt.setString(8, r.getRooms_name());
+			pstmt.setString(9, r.getPersonnel());
+			pstmt.setString(10, r.getBedcount());
+			pstmt.setString(11, r.getPrice());
+			pstmt.setString(12, r.getRooms_img1());
+			pstmt.setString(13, r.getRooms_img2());
 			
 
 		
