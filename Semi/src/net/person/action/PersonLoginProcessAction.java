@@ -37,7 +37,7 @@ public class PersonLoginProcessAction implements Action {
 			}
 			
 			forward.setRedirect(true);
-			forward.setPath("person/test.jsp");
+			forward.setPath("main.com");
 			return forward;
 	}else {
 		String message="��й�ȣ�� ��ġ���� �ʽ��ϴ�.";
