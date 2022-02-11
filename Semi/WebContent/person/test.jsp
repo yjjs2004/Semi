@@ -324,9 +324,9 @@ button {
 					id="datepicker2" style="width: 6rem">
 			</div>
 			<div class="varDiv" style="margin-top: 1rem">
-				<form action="cart.test">
-					<button id="people">인원수</button>
-				</form>
+			<form action="basket.test">
+				<button id="people">인원수</button>
+			</form>
 				<label>
 					<button id="search">
 						<i class="fas fa-search"></i>

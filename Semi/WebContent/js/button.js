@@ -16,7 +16,7 @@ $(function (){
 	});
 	//인원수 
 	$('#people').click(function(){
-		rocation.href="";
+
 	});
 	//검색
 	$('#search').click(function(){		

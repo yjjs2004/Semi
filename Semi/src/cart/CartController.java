@@ -29,8 +29,8 @@ public class CartController extends HttpServlet{
 		Action action = null;
 		ActionForward forward =null;
 		switch (command) {
-		case "/cart.test":
-			action = new CartAction();			
+		case "/basket.test":
+			action = new CartAction();		
 			break;		
 		}//switch end
 		

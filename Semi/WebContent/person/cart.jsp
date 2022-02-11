@@ -7,7 +7,6 @@
 <head>
 <meta charset="UTF-8">
 <title>장바구니</title>
-<jsp:include page="header.jsp" />
 </head>
 <body>
 <div>
@@ -17,20 +16,25 @@
 	<br>
 	<br>
 	<br>
-	
-	실행전
-	<c:forEach var="g" items="${cart}">
-	실행
-		<th>name</th>
-		<th>price</th>
-		<tr>
-			<td>${g.name}</td>
-			<td>${g.price}</td>
-		</tr>
+
+	<c:forEach var="i" items="${cart}">
+		<c:out value= "${i.name}" />
+		<c:out value= "${i.price}" />
 	</c:forEach>
+
+	실행전
+	<table>
+		<c:forEach var="g" items="${cart}">	
+			<th>name</th>
+			<th>price</th>
+			<tr>
+				<td>${g.name}</td>
+				<td>${g.price}</td>
+			</tr>
+		</c:forEach>
+	</table>
 	실행후
 	
 </div>	
-<jsp:include page="pooter.jsp" />
 </body>
 </html>

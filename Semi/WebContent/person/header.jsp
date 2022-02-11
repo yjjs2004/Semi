@@ -33,7 +33,7 @@ header {
 	<header>
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
-				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
+				<a href="http://localhost:8088/Semi" class="navbar-brand"> <img
 					src="../image/로고.png" width="65px" height="65px" alt="AdminLTE Logo"
 					class="brand-image img-circle elevation-3" style="opacity: .8">
 				</a>
@@ -48,10 +48,9 @@ header {
 				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 					<!-- Left navbar links -->
 					<ul class="navbar-nav">
-						<li class="nav-item"><a href="http://localhost:8088/Semi/person/mainPage.jsp" class="nav-link">Home</a>
+						<li class="nav-item"><a href="http://localhost:8088/Semi" class="nav-link">Home</a>
 						</li>
-						<li class="nav-item"><a href="#" class="nav-link">Contact</a>
-						</li>
+					
 						<li class="nav-item dropdown"><a id="dropdownSubMenu1"
 							href="#" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
@@ -108,42 +107,15 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-					<!-- Messages Dropdown Menu -->
-					<li class="nav-item dropdown"><a class="nav-link"
-						data-toggle="dropdown" href="#"> <i class="fas fa-comments"></i>
-							<span class="badge badge-danger navbar-badge">3</span>
-					</a>
-						
-					<!-- Notifications Dropdown Menu -->
-					<li class="nav-item dropdown"><a class="nav-link"
-						data-toggle="dropdown" href="#"> <i class="far fa-bell"></i> <span
-							class="badge badge-warning navbar-badge">15</span>
-					</a>
-						<div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-							<span class="dropdown-header">15 Notifications</span>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-envelope mr-2"></i> 4 new messages <span
-								class="float-right text-muted text-sm">3 mins</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-users mr-2"></i> 8 friend requests <span
-								class="float-right text-muted text-sm">12 hours</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item"> <i
-								class="fas fa-file mr-2"></i> 3 new reports <span
-								class="float-right text-muted text-sm">2 days</span>
-							</a>
-							<div class="dropdown-divider"></div>
-							<a href="#" class="dropdown-item dropdown-footer">See All
-								Notifications</a>
-						</div></li>
-					<li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="login.com"
-						role="button"> <i class="fas fa-th-large"></i>
-					</a></li>
+					<!-- 수정해서 사용하면 됩니다. 1번 2번 -->
+					<li>
+						<a class="nav-link" data-toggle="dropdown" href="#"> 1 </a>
+					<li>
+						<a class="nav-link" href="#"> 2 </a>
+					</li>
+					<li>
+						<a class="nav-link" href="login.com"role="button">Login</a>
+					</li>
 				</ul>
 			</div>
 		</nav>

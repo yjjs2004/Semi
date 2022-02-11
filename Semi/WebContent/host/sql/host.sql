@@ -20,3 +20,4 @@ create table host(
 
 select * from host
 
+select * from cart

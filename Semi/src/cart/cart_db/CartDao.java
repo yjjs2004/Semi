@@ -12,40 +12,41 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 
+
 public class CartDao {
 	private DataSource ds;
-	public CartDao(){
+		
+	public CartDao() {		
 		try {
 			Context init = new InitialContext();
 			ds = (DataSource) init.lookup("java:comp/env/jdbc/OracleDB");
-		}catch(Exception ex) {
-			System.out.println("DB 연결 실패");
-			System.out.println("DB 연결 실패");
-			System.out.println("DB 연결 실패: "+ex);
-			System.out.println("DB 연결 실패");
-			System.out.println("DB 연결 실패");
+		} catch (Exception e) {
+			System.out.println("DB 연결 실패 : "+ e);
+			return ;
 		}
+			
 	}
 	
-	public Cart getCart() {
+	public List<Cart> getCart() {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		Cart cart = null;
-
-		String sql= "select * from cart";
+		ResultSet rs = null;				
+		List<Cart> list = null;
 		try {
 			con = ds.getConnection();
+			String sql= "select * from cart";
 			pstmt = con.prepareStatement(sql);
-			rs=pstmt.executeQuery();
-			List<Cart> carts = new ArrayList<Cart>();
-						 
+			rs= pstmt.executeQuery();
+			
+			int i=0;
 			while (rs.next()) {
-				cart = new Cart();
+				if(i++ ==0) {
+					list = new ArrayList<Cart>();
+				}
+				Cart cart = new Cart();				
 				cart.setName(rs.getString("name"));
 				cart.setPrice(rs.getInt("price"));
-				
-				carts.add(cart);
+				list.add(cart);
 			}
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -69,8 +70,8 @@ public class CartDao {
 				e.printStackTrace();
 			}
 		}
-		
-		return cart;
+
+		return list;
 	}
 	
 	
