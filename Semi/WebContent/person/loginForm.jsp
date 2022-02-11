@@ -121,6 +121,10 @@ span {
 		$(".join").click(function() {
 			location.href = "join.com";
 		});
+	$(function() {
+			$(".business").click(function() {
+				location.href = "join.com";
+			});
 
 		var id = '${id}';
 		if (id) {
@@ -142,6 +146,7 @@ span {
 			name="remember" value="store"> <span>remember</span>
 		<div class="clearfix">
 			<button type="submit" class="submitbtn">로그인</button>
+			<button type="button" class="business">사업자 로그인</button>
 			<button type="button" class="join">회원가입</button>
 			<br> <br>
 			<button type="button" class="facebook">FaceBook</button>

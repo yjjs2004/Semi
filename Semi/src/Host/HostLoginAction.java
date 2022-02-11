@@ -13,7 +13,7 @@ public class HostLoginAction implements Action {
 			throws ServletException, IOException {
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
-		forward.setPath("login.jsp");
+		forward.setPath("host/loginform.jsp");
 		return forward;
 	}
 
