@@ -108,6 +108,10 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+				<li class="nav-item"><a class="nav-link"
+						data-widget="control-sidebar" data-slide="true" href="login.com"
+						role="button">로그인
+					</a></li>
 					<!-- Messages Dropdown Menu -->
 					<li class="nav-item dropdown"><a class="nav-link"
 						data-toggle="dropdown" href="#"> <i class="fas fa-comments"></i>
@@ -140,10 +144,9 @@ header {
 							<a href="#" class="dropdown-item dropdown-footer">See All
 								Notifications</a>
 						</div></li>
-					<li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="#"
-						role="button"> <i class="fas fa-th-large"></i>
-					</a></li>
+					
+				
+			
 				</ul>
 			</div>
 		</nav>
