@@ -49,7 +49,7 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	
-	 <jsp:include page="header.jsp" />
+	 <jsp:include page="../person/header.jsp" />
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
@@ -70,95 +70,7 @@
                     <li><a href="${pageContext.request.contextPath}/reg.net"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;숙소등록</a></li>
                 </ul>
             </aside>
-            <main id="main" class=st/main" style="min-height:800px;">
-                <div class="breadcrumb">
-                    <ul class="breadcrumb-list">
-                        <li><i class="fas fa-home"></i>&nbsp;&nbsp;HOME&nbsp;&nbsp;&nbsp;<i class="fas fa-angle-right"></i> </li>
-                        <li>&nbsp;&nbsp;&nbsp;마이페이지</li>
-                    </ul>
-                </div>
-                <section class="reservation-list-sec">
-                    <h1>숙소현황</h1>
-                    <section class="category-sec">
-                        <div class="category-bar">
-                            <ul>
-                                <li>
-                                    <a class="category-img ${(accType==0)?'selected':''}" href="list">
-                                        <img src="/images/main/all-icon.png" alt="">
-                                        <span>전체</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="category-img ${(accType==1)?'selected':''}" href="?accType=1">
-                                        <img src="/images/main/hotel-icon.png" alt="">
-                                        <span>호텔</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="category-img ${(accType==2)?'selected':''}" href="?accType=2">
-                                        <img src="/images/main/motel-icon.png" alt="">
-                                        <span>모텔</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="category-img ${(accType==3)?'selected':''}" href="?accType=3">
-                                        <img src="/images/main/guesthouse-icon.png" alt="">
-                                        <span>게스트하우스</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="category-img ${(accType==4)?'selected':''}" href="?accType=4">
-                                        <img src="/images/main/resort-icon.png" alt="">
-                                        <span>리조트</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="category-img ${(accType==5)?'selected':''}" href="?accType=5">
-                                        <img src="/images/main/pension-icon.png" alt="">
-                                        <span>펜션</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-
-                    <section class="acc-item-sec">
-                    	<c:forEach items="${list }" var="item" varStatus="status">
-	                        <div class="snip1368">
-	                        <c:forTokens var="fileRoute" items="${item.accFileRoute}" delims="," varStatus="st">
-	                        	<c:if test="${st.first == true}">
-		                        	<img src="${fileRoute}" alt="">
-	                        	</c:if>
-	                        </c:forTokens>
-	                            
-	                            <h3>상세보기</h3>
-	                            <figcaption>
-	                                <div class="icons"><a href="#"><i class="ion-social-reddit-outline"></i></a>
-	                                  <a href="#"> <i class="ion-social-twitter-outline"></i></a>
-	                                  <a href="#"> <i class="ion-social-vimeo-outline"></i></a>
-	                                </div>
-	                              </figcaption>
-	                            <div class="description-item">
-	                                <p>${item.accName }</p>
-	                                <P> <fmt:formatNumber type="number"  pattern="0.0" value="${ (((item.score*10) - ((item.score*10)%1)) * (1/10))*2   } " /> 추천해요</P>
-	                                <p>${fn:substring(item.accLocation,0,7) }</p>
-	                            </div>
-	                            <div class="item-price">
-	                                <div>
-	                                    <p>숙박</p>
-	                                    <p>예약특가</p>
-	                                    <p><fmt:formatNumber value="${item.price }" pattern="#,###" />원</p>
-	                                </div>
-	                            </div>
-	                            <div class="hovered-item-bg">
-	                            </div>
-	                        </div>
-                    	</c:forEach>
-                        
-                    </section>
-                    
-                </section>
-            </main>
+            
         </div>
     </section>
 
