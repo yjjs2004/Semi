@@ -56,14 +56,12 @@ button:focus {
 	padding: 14px 20px;
 	background-color: #3a3ad3;
 }
-<<<<<<< HEAD
 
-=======
 .host_join {
 	padding: 14px 20px;
 	background-color: #3a97d3;
 }
->>>>>>> branch 'master' of https://github.com/yjjs2004/Semi.git
+
 .facebook {
 	padding: 14px 20px;
 	background-color: #343476;
@@ -78,6 +76,8 @@ button:focus {
 	padding: 14px 20px;
 	background-color: #e5d75a;
 }
+
+
 
 form {
 	background-color: #fefefe;
@@ -128,17 +128,16 @@ span {
 		$(".join").click(function() {
 			location.href = "join.com";
 		});
-<<<<<<< HEAD
+
 	$(function() {
 			$(".business").click(function() {
 				location.href = "join.com";
 			});
 
-=======
 		$(".host_join").click(function() {
 			location.href = "host_join.net";
 		});
->>>>>>> branch 'master' of https://github.com/yjjs2004/Semi.git
+
 		var id = '${id}';
 		if (id) {
 			$("#id").val(id);
@@ -159,7 +158,7 @@ span {
 			name="remember" value="store"> <span>remember</span>
 		<div class="clearfix">
 			<button type="submit" class="submitbtn">로그인</button>
-			<button type="button" class="business">사업자 로그인</button>
+			<button type="button" class="business" >사업자 로그인</button>
 			<button type="button" class="join">회원가입</button>
 			<button type="button" class="host_join">기업회원가입</button>
 			<br> <br>

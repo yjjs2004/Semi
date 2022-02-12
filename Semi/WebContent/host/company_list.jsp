@@ -49,7 +49,7 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	
-	 <jsp:include page="header.jsp" />
+	 <jsp:include page="../person/header.jsp" />
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">

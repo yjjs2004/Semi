@@ -1,2 +1,3 @@
 eclipse.preferences.version=1
 encoding//WebContent/person/person.sql=UTF-8
+encoding//src/net/person/action/PersonLoginProcessAction.java=UTF-8
