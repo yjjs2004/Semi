@@ -36,7 +36,7 @@ header {
 	<script>
 		location.href = "login.net";
 	</script>
-	</c:if>
+</c:if>
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
 				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
@@ -73,22 +73,20 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-				<li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="login.com"
-						role="button"> 로그인
-					</a></li>
 					<!-- Messages Dropdown Menu -->
 					<c:if test="${!empty id }">
 				   <li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="main.net"
+						data-widget="control-sidebar" data-slide="true" href="login.net"
 						role="button">${id }님(로그아웃)</a></li>
-						<c:if test="${id=='admin' }">
+						<c:if test="${id=='asd' }">
 							<!-- Notifications Dropdown Menu -->
 							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					            data-toggle="dropdown">관리자</a>
 								<div class="dropdown-menu">
-							<a class="dropdown-item" href="memberList.net">회원정보</a>
-							<a class="dropdown-item" href="BoardList.bo">게시판</a>
+							<a class="dropdown-item" href="hostUpdate.net">정보수정</a>
+							<a class="dropdown-item" href="res_detail.net">예약관리</a>
+							<a class="dropdown-item" href="list.net">숙소현황</a>
+							<a class="dropdown-item" href="reg.net">숙소등록</a>
 							</div></li>
 						</c:if>
 					</c:if>

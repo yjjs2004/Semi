@@ -21,3 +21,5 @@ create table host(
 select * from host
 
 select * from cart
+
+select host_id, host_password from host where host_id='asd'

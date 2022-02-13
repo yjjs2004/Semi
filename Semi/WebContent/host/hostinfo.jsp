@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<jsp:include page="header.jsp"/>
+<jsp:include page="header2.jsp"/>
 <style>
 	tr>te:nth-child(odd){font-weight: bold}
 	td{text-align:center}

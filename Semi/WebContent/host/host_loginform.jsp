@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <html>
 <head>
-<title>회원관리 시스템 로그인 페이지</title>
+<title>기업로그인 페이지</title>
 <style>
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -125,45 +125,27 @@ span {
 <script src="${pageContext.request.contextPath}/js/jquery-3.6.0.js"></script>
 <script>
 	$(function() {
-		$(".join").click(function() {
-			location.href = "join.com";
-		});
-
-		$(".business").click(function() {
-			var id = $("#id").val(); //id=admin
-			var pass= $("#pass").val(); //pass=1
-			//"id="+id +"&pass="+pass
-			location.href = "loginProcess.net?id="+id + "&pass="+pass ;
-		});
-
-
 		$(".host_join").click(function() {
 			location.href = "host_join.net";
 		});
 
-		var id = '${id}';
-		if (id) {
-			$("#id").val(id);
-			$("#remember").prop('checked', true);
-		}
 	})
 </script>
 
 </head>
 <body>
-	<form name="loginform" action="loginProcess.com" method="post">
+	<form name="host_loginform" action="loginProcess.net" method="post">
 		<h1>로그인</h1>
 		<hr>
-		<b>아이디</b> <input type="text" name="id" placeholder="Enter id" id="id"
-			required maxLength="12"> <span id="message"></span> <b>비밀번호</b>
-		<input type="password" name="pass" id="pass" placeholder="Enter password"
+		<b>아이디</b> <input type="text" name="id" placeholder="Enter id"
+			required maxLength="12"> <span id="message"></span>
+			 <b>비밀번호</b>
+		<input type="password" name="pass" placeholder="Enter password"
 			required> <input type="checkbox" id="remember"
 			name="remember" value="store"> <span>remember</span>
 		<div class="clearfix">
 			<button type="submit" class="submitbtn">로그인</button>
-			<button type="button" class="business">사업자 로그인</button>
-			<button type="button" class="join">회원가입</button>
-			<button type="button" class="host_join">기업회원가입</button>
+			<button type="button" class="host_join">회원가입</button>
 			<br> <br>
 			<button type="button" class="facebook">FaceBook</button>
 			<button type="button" class="naver">Naver</button>

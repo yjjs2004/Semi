@@ -85,7 +85,7 @@ private DataSource ds;
 		ResultSet rs = null;
 		try {
 			con = ds.getConnection();
-			String sql = "select *from host where host_id=? ";
+			String sql = "select *from host where host_id = ? ";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs=pstmt.executeQuery();
@@ -160,47 +160,90 @@ private DataSource ds;
 		return result;
 	}
 	public int isId(String id, String pass) {
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		int result = 0;
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		int result=-1;//DB에 해당 id가 없습니다.
 		try {
-
-			conn = ds.getConnection();
-
-			String sql = "select PERSONAL_ID from personal where PERSONAL_ID = ?";
-			pstmt = conn.prepareStatement(sql);
+			con = ds.getConnection();
+			
+			String sql = "select HOST_ID, HOST_PASSWORD from HOST where HOST_ID = ? ";
+			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
-			rs = pstmt.executeQuery();
-
-			if (rs.next()) {
-				result = 1;
+			rs= pstmt.executeQuery();
+			
+			if(rs.next()) {
+				if(rs.getString(2).contentEquals(pass)) {
+					result =1;//아이디 비밀번호 일치
+				}else {
+					result = 0;//비밀번호가 불일치
+				}
 			}
-		} catch (Exception e) {
+		}catch(Exception e) {
 			e.printStackTrace();
-		} finally {
-			if (rs != null)
+		}finally {
+			if(rs != null)
 				try {
 					rs.close();
-				} catch (SQLException ex) {
+				}catch(SQLException ex	) {
 					ex.printStackTrace();
 				}
-			if (pstmt != null)
+			if(pstmt !=null)
 				try {
 					pstmt.close();
-				} catch (SQLException ex) {
+				}catch(SQLException ex) {
 					ex.printStackTrace();
 				}
-			if (conn != null)
+			if(con != null)
 				try {
-					conn.close();
-				} catch (SQLException ex) {
+					con.close();
+				}catch(SQLException ex) {
 					ex.printStackTrace();
 				}
 		}
 		return result;
+	
 	}
-
-
+	public int isId(String id) {
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		int result=-1;//DB에 해당 id가 없습니다.
+		try {
+			con = ds.getConnection();
+			
+			String sql = "select HOST_ID from HOST where HOST_ID= ? ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			rs= pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = 0;
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(rs != null)
+				try {
+					rs.close();
+				}catch(SQLException ex	) {
+					ex.printStackTrace();
+				}
+			if(pstmt !=null)
+				try {
+					pstmt.close();
+				}catch(SQLException ex) {
+					ex.printStackTrace();
+				}
+			if(con != null)
+				try {
+					con.close();
+				}catch(SQLException ex) {
+					ex.printStackTrace();
+				}
+		}
+		return result;
+	
+	}
 
 }

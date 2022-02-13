@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
+
 @WebServlet("*.net")
 public class HostController extends javax.servlet.http.HttpServlet {
 	private static final long serialVersionUID =1L;
@@ -80,6 +82,9 @@ public class HostController extends javax.servlet.http.HttpServlet {
 			break;
 		case "/room_process.net": //숙소관리
 			action = new RoomProcessAction();
+			break;
+		case "/main.net":
+			action = new HostMainPageAction();
 			break;
 		}//switch end
 		forward = action.execute(request, response);

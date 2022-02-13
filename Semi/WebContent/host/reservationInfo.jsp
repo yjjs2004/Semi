@@ -50,10 +50,15 @@
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	
+	 <jsp:include page="header2.jsp"/>
+	 <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/company/userInfo/reservationInfo.css">
 </head>
 
 <body>
-    <jsp:include page="header.jsp"/>
+   
 
     <section class="container-sec">
         <div class="container2">
