@@ -129,10 +129,12 @@ span {
 			location.href = "join.com";
 		});
 
-	$(function() {
-			$(".business").click(function() {
-				location.href = "join.com";
-			});
+		$(".business").click(function() {
+			var id = $("#id").val(); //id=admin
+			var pass= $("#pass").val(); //pass=1
+			//"id="+id +"&pass="+pass
+			location.href = "loginProcess.net?id="+id + "&pass="+pass ;
+		});
 
 		$(".host_join").click(function() {
 			location.href = "host_join.net";

@@ -112,7 +112,7 @@ header {
 					<!-- Messages Dropdown Menu -->
 					<c:if test="${!empty id }">
 				   <li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="logout.com"
+						data-widget="control-sidebar" data-slide="true" href="main.net"
 						role="button">${id }님(로그아웃)</a></li>
 						<c:if test="${id=='admin' }">
 							<!-- Notifications Dropdown Menu -->
