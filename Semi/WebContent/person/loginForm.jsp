@@ -135,6 +135,8 @@ span {
 			//"id="+id +"&pass="+pass
 			location.href = "loginProcess.net?id="+id + "&pass="+pass ;
 		});
+		
+		
 		$(".host_join").click(function() {
 			location.href = "host_join.net";
 		});
