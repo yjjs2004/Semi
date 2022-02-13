@@ -32,11 +32,6 @@ header {
 </head>
 <body>
 	<header>
-	<c:if test="${empty id }">
-	<script>
-		location.href = "login.net";
-	</script>
-</c:if>
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
 				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
@@ -74,11 +69,17 @@ header {
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
 					<!-- Messages Dropdown Menu -->
-					<c:if test="${!empty id }">
+					<c:if test="${empty id }">
 				   <li class="nav-item"><a class="nav-link"
 						data-widget="control-sidebar" data-slide="true" href="login.net"
+						role="button">로그인</a></li>
+					</c:if>
+						
+					<c:if test="${!empty id }">
+				   <li class="nav-item"><a class="nav-link"
+						data-widget="control-sidebar" data-slide="true" href="logout.net"
 						role="button">${id }님(로그아웃)</a></li>
-						<c:if test="${id=='asd' }">
+						
 							<!-- Notifications Dropdown Menu -->
 							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					            data-toggle="dropdown">관리자</a>
@@ -88,7 +89,7 @@ header {
 							<a class="dropdown-item" href="list.net">숙소현황</a>
 							<a class="dropdown-item" href="reg.net">숙소등록</a>
 							</div></li>
-						</c:if>
+						
 					</c:if>
 				</ul>
 			</div>
