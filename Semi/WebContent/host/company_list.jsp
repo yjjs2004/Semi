@@ -10,7 +10,7 @@
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
-    <title>숙소현황 | 틈을 채우다</title>
+    <title>숙소현황</title>
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	
-	 <jsp:include page="header.jsp" />
+	 <jsp:include page="header2.jsp" />
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">

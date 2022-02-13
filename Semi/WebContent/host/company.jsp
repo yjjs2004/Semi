@@ -11,9 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>업체등록 | 틈을 채우다</title>
-    <link rel="stylesheet" href="css2/reset.css" type="text/css">
-    <link rel="stylesheet" href="css2/layout.css">
-    <link rel="stylesheet" href="css2/company/accommodation/reg.css ">
+    
     <link rel="preconnect" href="https//fonts.gstatic.com">
     
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
@@ -52,6 +50,11 @@
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	 <jsp:include page="header2.jsp"/>
+	 
+	 <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css" type="text/css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/company/accommodation/reg.css ">
     <script>
     function findAddr() {
 		new daum.Postcode({
@@ -75,7 +78,6 @@
 		}).open();
     }
     </script>
-	 <jsp:include page="header.jsp"/>
 	 <style>
 	 .text{
         width:300px;

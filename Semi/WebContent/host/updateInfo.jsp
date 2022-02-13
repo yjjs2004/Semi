@@ -8,14 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>회원정보수정</title>
-    <link rel="stylesheet" href="css2/reset.css">
-    <link rel="stylesheet" href="css2/layout.css">
-    <link rel="stylesheet" href="css2/company/userInfo/updateInfo.css">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 	<script src="/js/company/userInfo/updateInfo.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
+
 <%-- <script src="${pageContext.request.contextPath}/js/slideShow.js"></script> --%>
 <script src="${pageContext.request.contextPath}/js/button.js"></script>
 <%-- <script src="${pageContext.request.contextPath}/js/map.js"></script> --%>
@@ -47,10 +46,16 @@
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	
+	<jsp:include page="header2.jsp"/>
+	
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/company/userInfo/updateInfo.css">
 </head>
 
 <body>
-    <jsp:include page="header.jsp"/>
+  
 
     <section class="container-sec">
         <div class="container2">
@@ -73,7 +78,7 @@
                 <section class="update-info-sec">
                     <h1>회원정보수정</h1>
                     <div class="update-form-sec">
-                        <form action="updateInfo" method="post">
+                        <form action="hostUpdate.net" method="post">
                    
                             <div class="reg-form-container">
                                  <div class="reg-form-item">
@@ -172,7 +177,7 @@
                                 </div>
                             </div>
                             <div class="button-submit">
-                                <input class="disabled" disabled type="submit" value="수정하기">
+                                <input type="submit" class="btn submit-btn" value="수정하기">
                             </div>
                         </form>
                     </div>
