@@ -14,6 +14,7 @@
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
+
 <div class="container">
 <br><br><br><br>
   <h2>문의 내역</h2>
