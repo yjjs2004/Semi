@@ -15,7 +15,7 @@ public class PersonLogoutAction implements Action {
 		ActionForward forward = new ActionForward();
 		HttpSession session = request.getSession();
 		session.invalidate();
-		forward.setPath("login.com");
+		forward.setPath("main.com");
 		forward.setRedirect(true);
 		return forward;
 	}

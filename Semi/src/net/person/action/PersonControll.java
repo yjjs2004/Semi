@@ -85,6 +85,9 @@ public class PersonControll extends javax.servlet.http.HttpServlet {
 		case "/updateProcess.com":
 			action = new PersonUpdateProcessAction();
 			break;
+		case "/faq.com":
+			action = new PersonFaqAction();
+			break;
 		/*
 		 * 
 		 * case"/loginProcess.net": action = new MemberLoginProcessAction(); break;

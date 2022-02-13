@@ -27,7 +27,7 @@ public class PersonFaqInfoAction implements Action {
 			forward.setRedirect(false);
 			request.setAttribute("message", "아이디에 해당하는 문의가 없습니다.");
 		}else {
-			forward.setPath("person/faq_history.jsp");
+			forward.setPath("person/faq_history2.jsp");
 			forward.setRedirect(false);
 			request.setAttribute("faqinfo", list);
 		}

@@ -22,7 +22,7 @@ public class PersonUpdateAction implements Action {
 		PersonDAO pdao=new PersonDAO();
 		Person p=pdao.Person_info(id);
 		
-		forward.setPath("person/updateForm.jsp");
+		forward.setPath("person/updateForm2.jsp");
 		forward.setRedirect(false);
 		request.setAttribute("personinfo", p);
 		

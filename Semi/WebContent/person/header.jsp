@@ -69,24 +69,26 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-				<li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="login.com"
-						role="button"> 로그인
-					</a></li>
 					<!-- Messages Dropdown Menu -->
+						<c:if test="${empty id }">
+	 <li class="nav-item"><a class="nav-link"
+						data-widget="control-sidebar" data-slide="true" href="login.com"
+						role="button">로그인</a></li>
+							<!-- Notifications Dropdown Menu -->
+</c:if>
 					<c:if test="${!empty id }">
 				   <li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="main.net"
+						data-widget="control-sidebar" data-slide="true" href="logout.com"
 						role="button">${id }님(로그아웃)</a></li>
-						<c:if test="${id=='admin' }">
 							<!-- Notifications Dropdown Menu -->
 							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
-					            data-toggle="dropdown">관리자</a>
+					            data-toggle="dropdown">마이페이지</a>
 								<div class="dropdown-menu">
-							<a class="dropdown-item" href="memberList.net">회원정보</a>
-							<a class="dropdown-item" href="BoardList.bo">게시판</a>
+							<a class="dropdown-item" href="update.com">회원정보수정</a>
+							<a class="dropdown-item" href="faqview.com">문의하기</a>
+							<a class="dropdown-item" href="faqinfo.com">문의내역</a>
+							<a class="dropdown-item" href="faq.com">자주 묻는 질문</a>
 							</div></li>
-						</c:if>
 					</c:if>
 				</ul>
 			</div>
