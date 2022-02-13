@@ -29,7 +29,7 @@ header {
 	/* 생략 */ 
 }
 .navbar-light .navbar-brand {
-    color: rgb(223 78 78 / 90%);
+    color: rgb(215 70 70 / 90%);
 }
 </style>
 </head>
