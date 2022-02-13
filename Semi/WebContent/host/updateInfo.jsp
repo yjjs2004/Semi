@@ -89,7 +89,7 @@
                                     <div class="input-box">
                                         <div>
                                             <input type="text" value="${host_id }" disabled class="id" 
-                                            id="id" autocorrect="off" 
+                                            id="id" autocorrect="off" placeholder="asd"
                                             autocapitalize="off" autocomplete="off" aria-autocomplete="none" inputmode="text">
                                             
                                         </div>
