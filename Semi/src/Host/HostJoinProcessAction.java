@@ -16,7 +16,7 @@ public class HostJoinProcessAction implements Action {
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String id =request.getParameter("id");
-		String pass =request.getParameter("pass");
+		String pass =request.getParameter("pass1");
 		String year = request.getParameter("year");
 		String month = request.getParameter("month");
 		String day = request.getParameter("day");

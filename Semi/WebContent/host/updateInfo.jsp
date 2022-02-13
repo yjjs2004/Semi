@@ -78,7 +78,7 @@
                 <section class="update-info-sec">
                     <h1>회원정보수정</h1>
                     <div class="update-form-sec">
-                        <form action="hostUpdate.net" method="post">
+                        <form action="main.net" method="post">
                    
                             <div class="reg-form-container">
                                  <div class="reg-form-item">

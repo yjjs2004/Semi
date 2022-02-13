@@ -73,12 +73,13 @@ header {
 
 				<!-- Right navbar links -->
 				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+				
 					<!-- Messages Dropdown Menu -->
 					<c:if test="${!empty id }">
 				   <li class="nav-item"><a class="nav-link"
-						data-widget="control-sidebar" data-slide="true" href="main.net"
+						data-widget="control-sidebar" data-slide="true" href="logout.net"
 						role="button">${id }님(로그아웃)</a></li>
-						<c:if test="${id=='asd' }">
+						
 							<!-- Notifications Dropdown Menu -->
 							<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbardrop"
 					            data-toggle="dropdown">관리자</a>
@@ -89,7 +90,7 @@ header {
 							<a class="dropdown-item" href="reg.net">숙소등록</a>
 							</div></li>
 						</c:if>
-					</c:if>
+					
 				</ul>
 			</div>
 		</nav>
