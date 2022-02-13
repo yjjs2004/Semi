@@ -41,6 +41,7 @@
 <script type="text/javascript"
 	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c751f51d711b8cb1563dba0f5bdaf7c6&librarys=services"></script>
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 <link rel="stylesheet"
 	href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -50,6 +51,7 @@
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	
 	 <jsp:include page="../person/header.jsp" />
+	 <br><br><br><br>
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
@@ -64,15 +66,18 @@
             <aside id="aside" class="aside">
                 <!-- <h1>게시판</h1> -->
                 <ul style="width:230px;">
-                     <li><a href="${pageContext.request.contextPath}/hostUpdate.net"><i class="far fa-user-circle"></i>&nbsp;&nbsp;회원정보수정</a></li>
-                    <li><a href="${pageContext.request.contextPath}/res_detail.net"><i class="far fa-calendar-check"></i>&nbsp;&nbsp;예약관리</a></li>
-                    <li class="active"><a href="${pageContext.request.contextPath}/list.net"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;숙소현황</a></li>
-                    <li><a href="${pageContext.request.contextPath}/reg.net"><i class="fas fa-sign-in-alt"></i>&nbsp;&nbsp;숙소등록</a></li>
+                     <li><a href="${pageContext.request.contextPath}/update.com"><i class="far fa-user-circle"></i>&nbsp;&nbsp;회원정보수정</a></li>
+                    <li><a href="${pageContext.request.contextPath}/faqview.com"><i class="far fa-calendar-check"></i>&nbsp;&nbsp;문의하기</a></li>
+                    <li><a href="${pageContext.request.contextPath}/faqinfo.com"><i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;문의내역</a></li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/faq.com"><i class="fa-solid fa-question"></i>&nbsp;&nbsp;자주묻는질문</a></li>
                 </ul>
             </aside>
-            
+            <section>
+            <jsp:include page="../person/faq_history.jsp" />
+            </section>
         </div>
     </section>
+
 
     <section>
         <footer id="footer" class="footer">

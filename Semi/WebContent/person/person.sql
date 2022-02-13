@@ -55,3 +55,6 @@ FAQ_COMPLETE)
 CREATE TABLE SEARCH(
 SEARCH_HISTORY VARCHR2(45));
 
+update personal set personal_nickname="tnwjd"
+personal_password="tnwjd"
+

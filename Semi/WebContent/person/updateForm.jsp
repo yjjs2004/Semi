@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
 <title>회원관리 시스템 회원가입 페이지</title>
@@ -8,10 +9,11 @@
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 	$(function() {
-		var checkid = false;
-		var checknick = false;
-		var checkemail = false;
-		var checkpw = false;
+		$("input[value='${personinfo.gender}']").prop('checked',true);
+		var checkid = true;
+		var checknick = true;
+		var checkemail = true;
+		var checkpw = true;
 		$("input:eq(0)").on(
 				'keyup',
 				function() {
@@ -187,21 +189,21 @@
 
 </head>
 <body>
-	<form name="joinform" action="joinProcess.com" method="post">
+	<form name="updateform" action="updateProcess.com" method="post">
 		<h1>회원가입</h1>
 		<hr>
-		<b>아이디</b> <input type="text" name="id" placeholder="Enter id"
-			required maxLength="12"> <span id="message"></span> <b>닉네임</b>
-		<input type="text" name="nick" placeholder="Enter nickname" required
-			maxLength="20"> <span id="nickmessage"></span> <b>비밀번호</b> <input
-			type="password" name="pass" placeholder="Enter password" required>
+		<b>아이디</b> <input type="text" name="id" value="${personinfo.id }"
+			readOnly><b>닉네임</b>
+		<input type="text" name="nick" value="${personinfo.nickname }" readOnly>
+		<b>비밀번호</b> <input
+			type="password" name="pass" value="${personinfo.password }" readOnly>
 		<b>비밀번호 확인</b> <input type="password" name="passcheck"
-			placeholder="Enter password" required><span id="pwmessage"></span>
+			value="${personinfo.password }" readOnly>
 		<b>휴대폰 번호</b> <input type="text" name="tel"
-			placeholder="xxx-xxxx-xxxx" required> <b>이름</b> <input
-			type="text" name="name" placeholder="Enter name" required
-			maxLength="5"> <b>생년월일</b> <input type="text" name="birth"
-			placeholder="xxxxxx" required maxLength="6"> <b>성별</b>
+			value="${personinfo.tel }"> <b>이름</b> <input
+			type="text" name="name" value="${personinfo.name }" readOnly
+			> <b>생년월일</b> <input type="text" name="birth"
+			value="${personinfo.birth }"> <b>성별</b>
 		<div>
 			<input type="radio" name="gender" value="남"><span>남자</span> <input
 				type="radio" name="gender" value="여"><span>여자</span>
@@ -212,10 +214,10 @@
 <input type="text" name="address" id="address" placeholder="주소"><br>
 <input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
 <input type="text" name="sample6_extraAddress" id="sample6_extraAddress" placeholder="참고항목"> <b>이메일 주소</b> <input type="text"
-			name="email" id="email" placeholder="Enter email" maxlength="30" required>
+			name="email" id="email" value="${personinfo.email }">
 		<span id="email_message"></span>
 		<div class="clearfix">
-			<button type="submit" class="submitbtn">회원가입</button>
+			<button type="submit" class="submitbtn">수정</button>
 			<button type="reset" class="cancelbtn">다시작성</button>
 		</div>
 	</form>

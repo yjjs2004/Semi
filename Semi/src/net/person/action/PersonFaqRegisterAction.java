@@ -45,7 +45,7 @@ public class PersonFaqRegisterAction implements Action {
 		out.println("<script>");
 		if(result==1) {
 			out.println("alert('문의가 등록되었습니다..')");
-			out.println("location.href='faqinfo.com'");
+			out.println("location.href='mypage.com'");
 		}
 		out.println("</script>");
 		out.close();

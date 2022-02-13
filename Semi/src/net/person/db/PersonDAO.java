@@ -343,5 +343,48 @@ public class PersonDAO {
 	}return result;
 	}
 
+	public int update(Person p) {
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		int result=0;
+		try {
+			con = ds.getConnection();
+
+			String sql = "update personal set PERSONAL_NICKNAME=?,"
+					+ "PERSONAL_PASSWORD=?, " 
+					+ "PERSONAL_TEL=?, PERSONAL_NAME=?, PERSONAL_BIRTH=?,"
+					+ "PERSONAL_GENDER=?, PERSONAL_POST=?, PERSONAL_ADDRESS=?," 
+					+ "PERSONAL_EMAIL=? where PERSONAL_ID=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, p.getNickname());
+			pstmt.setString(2, p.getPassword());
+			pstmt.setString(3, p.getTel());
+			pstmt.setString(4, p.getName());
+			pstmt.setString(5, p.getBirth());
+			pstmt.setString(6, p.getGender());
+			pstmt.setString(7, p.getPost());
+			pstmt.setString(8, p.getAddress());
+			pstmt.setString(9, p.getEmail());
+			pstmt.setString(10, p.getId());
+			result = pstmt.executeUpdate();
+		}catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (pstmt != null)
+				try {
+					pstmt.close();
+				} catch (SQLException ex) {
+					ex.printStackTrace();
+				}
+			if (con != null)
+				try {
+					con.close();
+				} catch (SQLException ex) {
+					ex.printStackTrace();
+				}
+		}
+		return result;
+	}
+
 
 }
