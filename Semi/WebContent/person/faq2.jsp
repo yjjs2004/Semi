@@ -8,7 +8,7 @@
 
 <head>
       <meta charset="UTF-8">
-    <title>숙소현황 | 틈을 채우다</title>
+    <title>Igoda 문의하기</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -54,22 +54,22 @@
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 <script src="${pageContext.request.contextPath}/js/summernote-lite.js"></script>
   <script src="${pageContext.request.contextPath}/js/lang/summernote-ko-KR.js"></script>
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/summernote-lite.css">
   
   <!--  -->
   <style>
   form{text-align:center;}
   </style>	
 	 <jsp:include page="../person/header.jsp" />
-	 <br><br>
+
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/company/userInfo/myAccommodationLists.css">  
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/summernote-lite.css">
 </head>
 
 <body>
-   
+   	 <br><br><br>
 
     <section class="container-sec">
         <div class="container2">

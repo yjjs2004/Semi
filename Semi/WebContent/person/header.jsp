@@ -12,9 +12,9 @@
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
 <!-- Font Awesome Icons -->
-<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
-<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/dist/css/adminlte.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>

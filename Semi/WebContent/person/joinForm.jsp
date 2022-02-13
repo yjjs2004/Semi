@@ -1,9 +1,160 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <html>
 <head>
-<title>회원관리 시스템 회원가입 페이지</title>
-<link href="${pageContext.request.contextPath}/css/join.css"
-	type="text/css" rel="stylesheet">
+<title>Igoda 회원가입 페이지</title>
+<jsp:include page="../person/header.jsp" />
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+	box-sizing: border-box
+}
+
+form>input {
+	border-radius: 3px;
+	border: 1px solid lightgray
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+}
+
+input[type=radio] {
+	width: 5%;
+	display: inline-block;
+	border: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+	outline: none;
+}
+
+button[type=button] {
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+button:focus {
+	outline: none;
+} /* 취소 버튼*/
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+    color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
+.submitbtn{
+background-color: #4CAF50;
+padding: 14px 20px;
+color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
+.business{
+background-color: #4e7e50;
+padding: 14px 20px;
+color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
+.join {
+	padding: 14px 20px;
+	background-color: #3a3ad3;
+}
+
+.host_join {
+	padding: 14px 20px;
+	background-color: #3a97d3;
+}
+
+.facebook {
+	padding: 14px 20px;
+	background-color: #343476;
+}
+
+.naver {
+	padding: 14px 20px;
+	background-color: #1eb725;
+}
+
+.kakao {
+	padding: 14px 20px;
+	background-color: #e5d75a;
+}
+
+
+
+.loginform {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid lightgray;
+	width: 600px; /* Could be more or less, depending on screen size */
+	padding: 16px;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+b+div {
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+} /* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+h1 {
+	text-align: center
+}
+
+b {
+	width: 100%;
+	display: block
+}
+
+span {
+	display: inline-block;
+	margin-top: -20px;
+	font-size: 10px
+}
+</style>
 <script src="${pageContext.request.contextPath}/js/jquery-3.6.0.js"></script>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -187,7 +338,9 @@
 
 </head>
 <body>
-	<form name="joinform" action="joinProcess.com" method="post">
+
+	 <br><br>
+	<form class="loginform" name="joinform" action="joinProcess.com" method="post">
 		<h1>회원가입</h1>
 		<hr>
 		<b>아이디</b> <input type="text" name="id" placeholder="Enter id"

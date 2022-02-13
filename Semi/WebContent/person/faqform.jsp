@@ -10,7 +10,7 @@
       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
-    <title>숙소현황 | 틈을 채우다</title>
+    <title>Igoda 자주 묻는 질문</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
@@ -55,7 +55,6 @@
 	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 	
 	 <jsp:include page="../person/header.jsp" />
-	 <br><br>
 	 
 	  <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/reset.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css2/layout.css">
@@ -63,7 +62,7 @@
 </head>
 
 <body>
-   
+   <br><br><br>
 
     <section class="container-sec">
         <div class="container2">

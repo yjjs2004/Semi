@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
 <html>
 <head>
-<title>회원관리 시스템 로그인 페이지</title>
+<title>Igoda 로그인 페이지</title>
+<jsp:include page="../person/header.jsp" />
 <style>
 body {
 	font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +12,7 @@ body {
 	box-sizing: border-box
 }
 
-input {
+form>input {
 	border-radius: 3px;
 	border: 1px solid lightgray
 }
@@ -34,8 +35,7 @@ input[type=text]:focus, input[type=password]:focus {
 	outline: none;
 }
 
-button {
-	background-color: #4CAF50;
+button[type=button] {
 	color: white;
 	padding: 14px 20px;
 	margin: 8px 0;
@@ -52,6 +52,28 @@ button:hover {
 button:focus {
 	outline: none;
 } /* 취소 버튼*/
+.submitbtn{
+background-color: #4CAF50;
+padding: 14px 20px;
+color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
+.business{
+background-color: #4e7e50;
+padding: 14px 20px;
+color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer; /* 손가락 커서 모양 */
+	width: 100%;
+	opacity: 0.9;
+}
 .join {
 	padding: 14px 20px;
 	background-color: #3a3ad3;
@@ -79,7 +101,7 @@ button:focus {
 
 
 
-form {
+.loginform {
 	background-color: #fefefe;
 	margin: 5% auto 15% auto;
 	/* 5% from the top, 15% from the bottom and centered */
@@ -151,7 +173,8 @@ span {
 
 </head>
 <body>
-	<form name="loginform" action="loginProcess.com" method="post">
+<br><br>
+	<form class="loginform" name="loginform" action="loginProcess.com" method="post">
 		<h1>로그인</h1>
 		<hr>
 		<b>아이디</b> <input type="text" name="id" placeholder="Enter id" id="id"
