@@ -373,4 +373,5 @@ span {
 		</div>
 	</form>
 </body>
+<jsp:include page="pooter.jsp" />
 </html>

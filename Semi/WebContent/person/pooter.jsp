@@ -7,7 +7,7 @@
 </head>
 <body>
 <footer class="main-footer">
-    <strong>다양한 정보를  넣을수 있는<a href="https://adminlte.io">Pooter</a>.</strong>
+    <strong>다양한 정보를  넣을수 있는<a href="https://adminlte.io">Footer</a>.</strong>
     입니다
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 

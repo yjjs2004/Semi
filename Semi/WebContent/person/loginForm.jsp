@@ -193,5 +193,6 @@ span {
 			<button type="button" class="kakao">Kakao</button>
 		</div>
 	</form>
+	<jsp:include page="pooter.jsp" />
 </body>
 </html>
