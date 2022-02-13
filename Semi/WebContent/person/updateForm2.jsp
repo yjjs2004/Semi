@@ -280,9 +280,9 @@
 			readOnly><b>닉네임</b>
 		<input type="text" name="nick" value="${personinfo.nickname }" readOnly>
 		<b>비밀번호</b> <input
-			type="password" name="pass" value="${personinfo.password }" readOnly>
+			type="password" name="pass" value="${personinfo.password }">
 		<b>비밀번호 확인</b> <input type="password" name="passcheck"
-			value="${personinfo.password }" readOnly>
+			value="${personinfo.password }">
 		<b>휴대폰 번호</b> <input type="text" name="tel"
 			value="${personinfo.tel }"> <b>이름</b> <input
 			type="text" name="name" value="${personinfo.name }" readOnly

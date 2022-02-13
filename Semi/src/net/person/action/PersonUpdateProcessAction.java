@@ -47,7 +47,7 @@ public class PersonUpdateProcessAction implements Action {
 		
 		if(result==1) {
 			out.println("alert('수정되었습니다')");
-			out.println("location.href='mypage.com';");
+			out.println("location.href='main.com';");
 		}else {
 			out.println("alert('회원정보 수정에 실패했습니다.')");
 			out.println("history.back()");

@@ -105,7 +105,7 @@
 <div class="container">
   <textarea class="summernote" name="editordata"></textarea>    
 </div>
-<input type="submit" value="전송">
+<input type="submit" value="등록">
 </form>
 <script>
 $('.summernote').summernote({

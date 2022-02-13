@@ -28,6 +28,9 @@ header {
 	border-bottom: 1px solid #e6e6e6;
 	/* 생략 */ 
 }
+.navbar-light .navbar-brand {
+    color: rgb(223 78 78 / 90%);
+}
 </style>
 </head>
 <body>
@@ -35,8 +38,8 @@ header {
 
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
-				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
-					src="../image/로고.png" width="65px" height="65px" alt="AdminLTE Logo"
+				<a href="main.com" class="navbar-brand"> Igoda<img
+					src="${pageContext.request.contextPath}/image/igoda.png" width="65px" height="65px" alt="Igoda"
 					class="brand-image img-circle elevation-3" style="opacity: .8">
 				</a>
  
@@ -50,7 +53,7 @@ header {
 				<div class="collapse navbar-collapse order-3" id="navbarCollapse">
 					<!-- Left navbar links -->
 					<ul class="navbar-nav">
-						<li class="nav-item"><a href="http://localhost:8088/Semi/person/mainPage.jsp" class="nav-link">Home</a>
+						<li class="nav-item"><a href="main.com" class="nav-link">Home</a>
 						</li>
 						
 					<!-- SEARCH FORM -->
