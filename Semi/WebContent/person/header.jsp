@@ -32,11 +32,7 @@ header {
 </head>
 <body>
 	<header>
-	<c:if test="${empty id }">
-	<script>
-		location.href = "login.net";
-	</script>
-	</c:if>
+
 		<nav class="navbar navbar-expand-md navbar-light navbar-white">
 			<div class="container">
 				<a href="http://localhost:8088/Semi/person/mainPage.jsp" class="navbar-brand"> <img
